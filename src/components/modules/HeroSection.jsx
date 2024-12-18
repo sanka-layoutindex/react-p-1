@@ -6,12 +6,14 @@ import hero3 from "../../assets/images/hero-img-3.png";
 function HeroSection() {
   return (
     <>
-      <div className="paddingGlobal hero-section-top">
-        <div className="container1">
-          <div className="hero-section">
-            <div className="heading section-tb">
-              <h1>We are proud of our products</h1>
-              <p className="para-large">
+      <div className="paddingGlobal heroSectionTop">
+        <div className="containerLarge">
+          <div className="HeroSection">
+            <div className="heading sectionTb">
+              <div className="titleWrapper">
+              <h1 className="fcPrimary fw700">We are proud of our products</h1>
+              </div>
+              <p className="fcPrimary textMedium">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor <br />
                 invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -19,20 +21,22 @@ function HeroSection() {
               </p>
             </div>
             <div class="boxes">
-              <div>
+              <div className="imageWrapper">
                 <img className="img-fluid" src={hero1} alt="hero" />
               </div>
-              <div>
+              <div className="imageWrapper">
                 <img className="img-fluid" src={hero2} alt="hero" />
               </div>
-              <div>
+              <div className="imageWrapper">
                 <img className="img-fluid" src={hero3} alt="hero" />
               </div>
             </div>
-            <div className="about section-tb">
-              <h4>About Us</h4>
-              <h2>We’re a team of data analysts</h2>
-              <p className="para-large">
+            <div className="about sectionTb">
+              <h3 className="fontGradiant fw700">About Us</h3>
+              <div className="titleWrapper">
+              <h2 className="fcPrimary fw700">We’re a team of data analysts</h2>
+              </div>
+              <p className="fcPrimary textMedium">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor <br />
                 invidunt ut labore et dolore magna aliquyam erat, sed diam

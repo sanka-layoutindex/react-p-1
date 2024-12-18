@@ -30,15 +30,15 @@
 
   .container1 {
     width: 100%;
-    max-width: 90rem;
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
   
     @include responsiveToUp(xxxl) {
-      max-width: 70rem;
+      max-width: 80rem;
     }
     @include responsiveToUp(xxl) {
-      max-width: 70rem;
+      max-width: 80rem;
     }
     @include responsiveToUp(xl) {
       max-width: 80rem;
@@ -48,14 +48,34 @@
     }
   }
 
-  .section-tb{
-    padding: #{$space60}rem 0;
+  .containerLarge {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    @include responsiveToUp(xxxl) {
+      max-width: 80rem;
+    }
+    @include responsiveToUp(xxl) {
+      max-width: 75rem;
+    }
+    @include responsiveToUp(xl) {
+      max-width: 75rem;
+    }
+    @include responsiveToUp(lg) {
+      max-width: 65rem;
+    }
   }
 
-  .section-top{
-    padding: #{$space60}rem 0 0 0;
+  .sectionTb{
+    padding-top: #{$space60}rem;
+    padding-bottom: #{$space60}rem;
   }
 
-  .section-bottom{
-    padding: 0 0 #{$space60}rem 0;
+  .sectionT{
+    padding-top: #{$space60}rem;
+  }
+
+  .sectionB{
+    padding-bottom: #{$space60}rem;
   }

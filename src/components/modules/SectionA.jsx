@@ -3,16 +3,16 @@ import React from "react";
 function SectionA() {
   return (
     <>
-      <div className="paddingGlobal section-a">
-        <div className="container1">
+      <div className="paddingGlobal sectionA sectionTb">
+        <div className="containerLarge">
           <div className="content">
             <div className="left">
-              <h4>Our Goals</h4>
-              <h2>
+              <h3 className="fontGradiant fw700">Our Goals</h3>
+              <h2 className="fcPrimary fw700">
                 To upscale your business <br />
                 to the next level
               </h2>
-              <p className="para-large">
+              <p className="fcPrimary textMedium">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et
@@ -20,11 +20,11 @@ function SectionA() {
               </p>
             </div>
             <div className="right">
-              <h4>Our Vision</h4>
-              <h2>
+              <h3 className="fontGradiant fw700">Our Vision</h3>
+              <h2 className="fcPrimary fw700">
                 To provide solutions for <br /> growing companies
               </h2>
-              <p className="para-large">
+              <p className="fcPrimary textMedium">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et

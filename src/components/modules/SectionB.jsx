@@ -6,10 +6,12 @@ import Slider1 from "../common/Slider1";
 function SectionB() {
   return (
     <>
-      <div className="paddingGlobal section_b">
-        <div className="container1 section-tb">
+      <div className="paddingGlobal sliderSection">
+        <div className="containerLarge sectionTb">
           <div className="content">
-            <h2>Read more posts</h2>
+            <div className="titleWrapper">
+            <h2 className="textLarge fcPrimary fw700">Read more posts</h2>
+            </div>
             <Slider1/>
           </div>
         </div>

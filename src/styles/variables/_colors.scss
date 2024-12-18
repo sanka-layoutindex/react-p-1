@@ -3,7 +3,26 @@ $secondaryColor: #F0F2FE;
 
 
 $blue1 :#6B7CFF;
-
 $blue2 :#E0E4FC;
+$blue3 : #373fff;
+$blue4 : #3acaf8;
 
-$white1 :#E0E4FC;
+$white1 : #FFFFFF;
+$white2 :#E0E4FC;
+
+$pink1 : #F9F0FB;
+
+$black2 :#2B2E3C;
+
+
+.gradiatBackgrond{
+    background-image: url(../../assets/images/Blur-Gradient.png);
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+.fontGradiant{
+    background: -webkit-linear-gradient($blue3,$blue4 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

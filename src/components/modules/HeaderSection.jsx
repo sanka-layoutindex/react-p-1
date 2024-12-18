@@ -8,7 +8,7 @@ function HeaderSection() {
   return (
     <>
       <div className="paddingGlobal">
-        <div className="container1">
+        <div className="containerLarge">
           <div className="header">
           <Navbar expand="lg" className="">
               <Navbar.Brand href="#home">

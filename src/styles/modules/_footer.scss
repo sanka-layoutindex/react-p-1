@@ -1,10 +1,15 @@
 .footer {
   background-color: $primaryColor;
-  padding: 40px 15px;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
 
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .titleWrapper{
+      margin-bottom: 0.5rem;
+    }
   }
 
   .logo {
@@ -15,32 +20,33 @@
 
   .navbar2 {
     padding-left: 0;
+    list-style: none;
 
     a {
       color: $white1;
       font-size: #{$font16}rem !important;
 
       &:hover {
-        color: #3acaf8;
+        color: $blue4;
         transition: 0.5s ease-in-out;
       }
     }
 
     li {
-      margin-bottom: 7px !important;
+      margin-bottom: 0.5rem !important;
     }
   }
 
   input[type="text" i] {
-    background-color: #2b2e3c;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: $black2;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
   }
 
   input[type="submit" i] {
-    background-color: white;
-    padding: 10px 25px;
-    border-radius: 15px;
+    background-color: $white1;
+    padding: 0.75rem 2rem;
+    border-radius: 12px;
     color: $primaryColor;
     margin-left: -10px;
   }
@@ -51,17 +57,17 @@
 
   .copyright {
     position: relative;
-    padding-top: 25px;
+    padding-top: 2rem;
     opacity: 0.8;
     display: flex;
-    gap: 15px;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
 
     &::before {
       content: "";
       position: absolute;
-      bottom: 15px;
+      bottom: 1rem;
       right: 0;
       background-color: white;
       height: 1px;

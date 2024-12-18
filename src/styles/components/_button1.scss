@@ -2,19 +2,19 @@
 
     a{
         background: $primaryColor !important;
-        border-radius: 15px;
-        color: white;
+        border-radius: 12px;
+        color: $white1;
         font-size: #{$font16}rem !important;
         font-weight: 700;
-        padding: 16px 40px !important;
+        padding: 1rem 2.5rem !important;
         display: inline-block;
-        border: 1px solid black;
+        border: 1px solid $primaryColor;
 
         &:hover{
-            background-color: white !important;
+            background-color: $white1 !important;
             color: $primaryColor;
             transition: 0.5s ease-in-out;
-            border: 1px solid black;
+            border: 1px solid $primaryColor;
         }
     }
   

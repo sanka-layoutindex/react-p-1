@@ -1,28 +1,40 @@
-.section_d{
-    .content{
-        display: grid;
-        grid-template-columns: 4fr 8fr;
+.sectionD {
+  .content {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 2rem;
 
-        .right{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-        }
+    .left {
+      margin-top: 2rem;
+
+      .titleWrapper{
+        margin-bottom: 1.5rem;
+      }
     }
 
-    .card {
-        border: none;
-        border-radius: 15px;
-        background-color: $blue2;
-        margin-bottom: 5px;
-
-        &:hover {
-            transform: scale(1.05);
-            transition: 0.5s ease-in-out;
-        }
-
-        img{
-            border-radius: 15px;
-        }
+    .right {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
     }
+  }
+
+  .card {
+    border: none;
+    border-radius: 0 0 1rem 1rem;
+    background-color: $blue2;
+
+    h6{
+        line-height: 1.4;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.5s ease-in-out;
+    }
+
+    .card-body{
+        padding: 1.5rem 2rem;
+    }
+  }
 }

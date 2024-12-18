@@ -9,11 +9,13 @@ import icon6 from "../../assets/images/Icon-6.svg";
 function SectionC() {
   return (
     <>
-      <div className="paddingGlobal section_c">
-        <div className="container1 section-bottom">
+      <div className="paddingGlobal sectionC">
+        <div className="containerLarge sectionBottom">
           <div className="heading">
-            <h2>Our corporate values</h2>
-            <p>
+            <div className="titleWrapper">
+            <h2 className="fcPrimary fw700">Our corporate values</h2>
+            </div>
+            <p className="fcPrimary textNormal">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy.
             </p>
@@ -25,8 +27,8 @@ function SectionC() {
                   <img className="img-fluid" src={icon1} alt="icon" />
                 </div>
                 <div className="card-body">
-                  <h6>Best in Class</h6>
-                  <p className="para-large">
+                  <h6 className="fcPrimary fw700">Best in Class</h6>
+                  <p className="textMedium fcPrimary">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy.
                   </p>
@@ -37,8 +39,8 @@ function SectionC() {
                   <img className="img-fluid" src={icon2} alt="icon" />
                 </div>
                 <div className="card-body">
-                  <h6>Authenticity</h6>
-                  <p className="para-large">
+                  <h6 className="fcPrimary fw700">Authenticity</h6>
+                  <p className="textMedium fcPrimary">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy.
                   </p>
@@ -49,8 +51,8 @@ function SectionC() {
                   <img className="img-fluid" src={icon3} alt="icon" />
                 </div>
                 <div className="card-body">
-                  <h6>Email Support</h6>
-                  <p className="para-large">
+                  <h6 className="fcPrimary fw700">Email Support</h6>
+                  <p className="textMedium fcPrimary">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy.
                   </p>
@@ -61,8 +63,8 @@ function SectionC() {
                   <img className="img-fluid" src={icon4} alt="icon" />
                 </div>
                 <div className="card-body">
-                  <h6>Discounts Available</h6>
-                  <p className="para-large">
+                  <h6 className="fcPrimary fw700">Discounts Available</h6>
+                  <p className="textMedium fcPrimary">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy.
                   </p>
@@ -73,8 +75,8 @@ function SectionC() {
                   <img className="img-fluid" src={icon5} alt="icon" />
                 </div>
                 <div className="card-body">
-                  <h6>Powerful Marketing</h6>
-                  <p className="para-large">
+                  <h6 className="fcPrimary fw700">Powerful Marketing</h6>
+                  <p className="textMedium fcPrimary">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy.
                   </p>
@@ -85,8 +87,8 @@ function SectionC() {
                   <img className="img-fluid" src={icon6} alt="icon" />
                 </div>
                 <div className="card-body">
-                  <h6>Inventory management</h6>
-                  <p className="para-large">
+                  <h6 className="fcPrimary fw700">Inventory management</h6>
+                  <p className="textMedium fcPrimary">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy.
                   </p>

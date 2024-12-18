@@ -47,12 +47,14 @@ var teamData = [
 
 function SectionD() {
   return (
-    <div className="paddingGlobal section_d section-bottom">
-      <div className="container1">
+    <div className="paddingGlobal sectionD sectionTb">
+      <div className="containerLarge">
         <div className="content">
           <div className="left">
-            <h2>Our talented Team</h2>
-            <p className="para-large">
+            <div className="titleWrapper">
+            <h2 className="fcPrimary fw700">Our talented Team</h2>
+            </div>
+            <p className="textMedium fcPrimary">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore.
             </p>
@@ -69,8 +71,8 @@ function SectionD() {
                     />
                   </div>
                   <div className="card-body">
-                    <h6>{team.title}</h6>
-                    <p className="para-small">{team.description}</p>
+                    <h6 className="fcPrimary fw700">{team.title}</h6>
+                    <p className="textNormal">{team.description}</p>
                   </div>
                 </div>
               );

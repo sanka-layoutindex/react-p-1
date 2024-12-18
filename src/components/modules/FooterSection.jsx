@@ -1,18 +1,20 @@
 import React from "react";
 import logo_white from "../../assets/images/logo-white.png";
-import fb from "../../assets/images/Facebook.png"
-import twitter from "../../assets/images/Twitter.png"
-import insta from "../../assets/images/Instagram.png"
-import linkdin from "../../assets/images/LinkedIn.png"
+import fb from "../../assets/images/Facebook.png";
+import twitter from "../../assets/images/Twitter.png";
+import insta from "../../assets/images/Instagram.png";
+import linkdin from "../../assets/images/LinkedIn.png";
 
 function FooterSection() {
   return (
     <>
-      <div className="paddingGlobal footer section-bottom">
-        <div className="container1">
+      <div className="paddingGlobal footer">
+        <div className="containerLarge">
           <div className="content">
             <div>
-              <h5>Company</h5>
+              <div className="titleWrapper">
+                <h5 className="fcWhite fw600">Company</h5>
+              </div>
               <ul className="navbar2">
                 <li>
                   <a href="/about">About Us</a>
@@ -29,7 +31,9 @@ function FooterSection() {
               </ul>
             </div>
             <div>
-              <h5>Resources</h5>
+              <div className="titleWrapper">
+                <h5 className="fcWhite fw600">Resources</h5>
+              </div>
               <ul className="navbar2">
                 <li>
                   <a href="/privacy">Privacy Policy</a>
@@ -46,7 +50,9 @@ function FooterSection() {
               </ul>
             </div>
             <div>
-              <h5>Product</h5>
+              <div className="titleWrapper">
+                <h5 className="fcWhite fw600">Product</h5>
+              </div>
               <ul className="navbar2">
                 <li>
                   <a href="/privacy">Privacy Policy</a>
@@ -66,44 +72,32 @@ function FooterSection() {
               </ul>
             </div>
             <div className="logo">
-              <img className="img-fluid" src={logo_white} alt="logo" />
-              <h5>Subscribe to our Newsletter</h5>
+              <div className="imageWrapper">
+                <img className="img-fluid" src={logo_white} alt="logo" />
+              </div>
+              <div className="titleWrapper">
+                <h5 className="fcWhite fw600">Subscribe to our Newsletter</h5>
+              </div>
               <form>
                 <input type="text" placeholder="Enter your Email" />
-                <input type="submit" name="Subscribe" />
+                <input type="submit" name="Subscribe" value="Subscribe" />
               </form>
             </div>
           </div>
           <div className="copyright">
-            <p className="para-xs">© Copyright Finsweet 2022</p>
+            <p className="textSmall fcWhite">© Copyright Finsweet 2022</p>
             <div className="social">
               <a href="/fb">
-                <img
-                  class="img-fluid"
-                  src={fb}
-                  alt="fb"
-                />
+                <img class="img-fluid" src={fb} alt="fb" />
               </a>
               <a href="/tw">
-                <img
-                  class="img-fluid"
-                  src={twitter}
-                  alt="fb"
-                />
+                <img class="img-fluid" src={twitter} alt="fb" />
               </a>
               <a href="/ins">
-                <img
-                  class="img-fluid"
-                  src={insta}
-                  alt="fb"
-                />
+                <img class="img-fluid" src={insta} alt="fb" />
               </a>
               <a href="/lin">
-                <img
-                  class="img-fluid"
-                  src={linkdin}
-                  alt="fb"
-                />
+                <img class="img-fluid" src={linkdin} alt="fb" />
               </a>
             </div>
           </div>
