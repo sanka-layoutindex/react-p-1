@@ -1,0 +1,51 @@
+.sectionHeaderWrapper {
+  @include flexSpaced;
+  margin-bottom: 2rem;
+  @include responsiveToUp(xxl) {
+    margin-bottom: 2rem;
+  }
+  @include responsiveToUp(md) {
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  &.headerCenterd {
+    @include flexCentered;
+    text-align: center;
+    // @include responsiveToUp(md) {
+    //   // text-align: left;
+    // }
+    .titleWrapper {
+      gap: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      @include responsiveToUp(md) {
+        gap: 0.5rem;
+      }
+      .textMedium {
+        @include responsiveToUp(md) {
+          font-size: #{$font20}rem !important;
+        }
+      }
+    }
+  }
+  .titleWrapper {
+    .text3Xlarge {
+      line-height: 1.1 !important;
+
+      @include responsiveToUp(md) {
+        font-size: #{$font28}rem !important;
+        line-height: 1 !important;
+      }
+    }
+    .textMedium {
+      @include responsiveToUp(md) {
+        font-size: #{$font20}rem !important;
+      }
+    }
+  }
+  .linkWrapper {
+  }
+}

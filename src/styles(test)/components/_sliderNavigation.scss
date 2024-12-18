@@ -1,0 +1,83 @@
+.sliderNavigationWrapper {
+  @include responsiveToUp(lg) {
+    display: none;
+  }
+  &:has(.swiper-scrollbar-lock) {
+    display: none;
+  }
+  .customScrollbarWrapper {
+    .commonScrollbar {
+      background-color: transparent;
+      height: 6px;
+      position: relative;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      @include responsiveToUp(md) {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+
+      .swiper-scrollbar-drag {
+        background-color: $gray4;
+        height: 100%;
+      }
+    }
+  }
+  .navigatioWrapper {
+    @include flexSpaced;
+    &:has(.swiper-button-lock) {
+      display: none;
+    }
+    .commonPagination {
+      //styleName: Paragraph/S;
+      @include fontJost;
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: left;
+      color: $gray9;
+    }
+    .navigation {
+      @include flexCenterGap(0.5rem);
+      @include responsiveToUp(md) {
+        display: none;
+      }
+      .sliderNav {
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        padding: 0.5rem;
+        border-radius: 2px;
+        border: 1px solid $gray4;
+        @include flexCentered;
+        color: $primaryColor !important;
+        background: $white !important;
+        &:hover {
+          background: $blue3 !important;
+        }
+        &:active {
+          background: $blue3 !important;
+        }
+
+        &.swiper-button-disabled {
+          color: $gray5 !important;
+          background: $gray1 !important;
+          border: 1px solid $gray1 !important;
+          svg {
+            opacity: 0.4;
+          }
+          &:hover {
+            background: $gray1 !important;
+          }
+          &:active {
+            background: $gray1 !important;
+          }
+        }
+        &.commonPrev {
+          transform: rotate(180deg);
+        }
+        &.commonNext {
+        }
+      }
+    }
+  }
+}

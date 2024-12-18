@@ -1,0 +1,202 @@
+.imageCollectionWrapper {
+  .imageCollectionGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    @include responsiveToUp(xxl) {
+      overflow: auto;
+      overflow-y: hidden;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .imageWrapper {
+      position: relative;
+      @include responsiveToUp(xxl) {
+        min-width: 18rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .textNormal {
+      }
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.75rem 1rem;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(0, 0, 0, 0.56) 90%
+        );
+      }
+    }
+  }
+}
+
+.searchWrapper {
+  .searchRow {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 42rem;
+    margin: auto;
+    @include responsiveToUp(lg) {
+      gap: 1rem;
+    }
+    .antBtn {
+      span {
+        display: flex;
+        @include responsiveToUp(lg) {
+          display: none;
+        }
+      }
+      .icon {
+        display: none;
+        @include responsiveToUp(lg) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+.excursionsFilterWrapper {
+  .filterGridWrapper {
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+
+    @include responsiveToUp(lg) {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .filterGridItems {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.5rem;
+      @include responsiveToUp(lg) {
+        display: none;
+      }
+      &.filterGridCustom {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .filter {
+        .dropdownWrapper {
+          .dropdown {
+            justify-content: space-between;
+            padding: 1rem 1.25rem;
+            width: 100%;
+            background-color: $white;
+          }
+        }
+      }
+    }
+    .filterDropdownWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .dropdownWrapper {
+        display: flex;
+        @include responsiveToUp(lg) {
+          display: none;
+        }
+      }
+
+      &.excursion {
+        display: none;
+        @include responsiveToUp(lg) {
+          display: flex;
+        }
+      }
+
+      .mobileFilter {
+        display: flex;
+        text-wrap: nowrap;
+        white-space: nowrap;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.2s ease-in-out;
+        padding: 0.5rem;
+        border-radius: 2px;
+
+        .iconWrapper {
+          width: 1.25rem;
+          height: 1.25rem;
+          min-width: 1.25rem;
+        }
+      }
+    }
+    .toggleWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      .tootleIconWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        .iconWrapper {
+          width: 2rem;
+          height: 2rem;
+          min-width: 2rem;
+          min-height: 2rem;
+          @include responsiveToUp(md) {
+            width: 1.5rem;
+            height: 1.5rem;
+            min-width: 1.5rem;
+            min-height: 1.5rem;
+          }
+        }
+        .textWrapper {
+          .textNormal {
+          }
+        }
+      }
+    }
+  }
+}
+
+.excursionsListWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  row-gap: #{$space56}rem;
+
+  @include responsiveToUp(lg) {
+    gap: 1rem;
+    row-gap: 1.75rem;
+  }
+  @include responsiveToUp(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    row-gap: 1.75rem;
+  }
+}
+
+// mobile
+
+.filterTitleBoxWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .icon {
+    width: 1rem;
+    svg {
+      width: auto;
+      height: 100%;
+      display: flex;
+    }
+  }
+}

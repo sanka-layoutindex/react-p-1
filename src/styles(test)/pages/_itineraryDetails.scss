@@ -1,0 +1,62 @@
+.stickyOrderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: #{$space56}rem;
+  &.listCard {
+    .ImageDiscriptionCardWrapper {
+      &:nth-child(even) {
+        .ImageDiscriptioCardGrid {
+          grid-template-columns: 0.4fr 0.6fr;
+          @include responsiveToUp(md) {
+            grid-template-columns: 1fr;
+          }
+          .DescriotionWrapper {
+            order: 2;
+            @include responsiveToUp(md) {
+              order: 1;
+            }
+          }
+          .ImageDiscriptioStickyImageWrapper {
+            order: 1;
+            @include responsiveToUp(md) {
+              order: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.dayAtSeaSeaction {
+  @include responsiveToUp(md) {
+    margin-bottom: #{$space28}rem;
+  }
+}
+.customSpaceMd {
+  @include responsiveToUp(md) {
+    margin-bottom: #{$space56}rem;
+  }
+}
+
+.section.odd {
+  .ImageDiscriptionCardWrapper {
+    .ImageDiscriptioCardGrid {
+      grid-template-columns: 0.4fr 0.6fr;
+      @include responsiveToUp(md) {
+        grid-template-columns: 1fr;
+      }
+      .DescriotionWrapper {
+        order: 2;
+        @include responsiveToUp(md) {
+          order: 1;
+        }
+      }
+      .ImageDiscriptioStickyImageWrapper {
+        order: 1;
+        @include responsiveToUp(md) {
+          order: 2;
+        }
+      }
+    }
+  }
+}

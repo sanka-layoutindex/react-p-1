@@ -1,0 +1,17 @@
+.stepSection {
+  background-color: $gray1;
+  padding: 1rem 0;
+  .stepWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    .stepItem {
+      font-size: #{$font20}rem;
+      color: $gray11;
+      font-weight: 400;
+      &.active {
+        color: $blue2;
+      }
+    }
+  }
+}

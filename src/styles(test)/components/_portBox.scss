@@ -1,0 +1,45 @@
+.portBoxLabel,.monthLabel,.checkbox {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  border-radius: 2px;
+  background-color: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  @include responsiveToUp(md){
+    background-color: transparent;
+  }
+  &.disabled{
+    background-color: unset !important;
+    pointer-events: none !important;
+    .formLabelName{
+      color:$gray5 !important;
+   
+      &:hover {
+        background-color: unset !important;
+      }
+    }
+  }
+  &:hover {
+    background-color: $gray1;
+  }
+  &:has(input:checked) {
+    background-color: $blue3 !important;
+    .formLabelName {
+      
+    }
+  }
+  .formInput {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+  }
+  .formLabelName {
+    color: $primaryColor;
+    line-height: 1.1 !important;
+  }
+}

@@ -1,0 +1,169 @@
+.formItem {
+  border: 1px solid $gray7 !important;
+  border-radius: 4px !important;
+  position: relative;
+  overflow: hidden;
+  &:has(.dark) {
+    border: 1px solid $black1 !important;
+  }
+  .ant-input-password {
+    border: 1px solid transparent !important;
+    border-radius: unset !important;
+  }
+  input {
+    padding: 0.75rem !important;
+    font-size: #{$font16}rem !important;
+    gap: 8px;
+    border: 1px solid transparent !important;
+    border-radius: unset !important;
+    &.small {
+      padding: 0.5rem 0.75rem !important;
+    }
+  }
+  .ant-input-suffix {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    width: 1.25rem;
+    background-color: $white;
+  }
+}
+
+.borderInput {
+  padding: 0.875rem 0 !important;
+  font-size: #{$font16}rem !important;
+  border: unset !important;
+  border-bottom: 1px solid $gray6 !important;
+  border-radius: unset !important;
+  box-shadow: unset !important;
+}
+
+.formInputWrapper {
+  &:has(> .errorMsg) {
+    .formInput {
+      color: $red3 !important;
+      border-bottom: 2px solid $red3 !important;
+    }
+  }
+  .formInput {
+    padding: 0.75rem 1rem !important;
+    font-size: #{$font18}rem !important;
+    border: unset !important;
+    border-bottom: 1px solid $gray6 !important;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+    width: 100%;
+    width: -webkit-fill-available;
+    width: stretch;
+    width: -moz-available;
+    &:focus-visible {
+      outline: unset;
+    }
+    &.error {
+      color: $red3 !important;
+      border-bottom: 2px solid $red3 !important;
+    }
+  }
+  .errorMsg {
+    color: $red3 !important;
+    font-size: #{$font14}rem;
+  }
+}
+
+// togglr btn
+.ant-switch {
+  min-width: 48px !important;
+  height: 28px !important;
+  border: 1px solid $gray4 !important;
+  .ant-switch-handle {
+    top: 3px !important;
+    inset-inline-start: 3px !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .ant-switch-inner {
+  }
+}
+.ant-switch.ant-switch-checked .ant-switch-handle {
+  inset-inline-start: calc(100% - 22px) !important;
+}
+.ant-switch:hover:not(.ant-switch-disabled),
+.ant-switch:not(.ant-switch-disabled) {
+  background: transparent !important;
+}
+.ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled),
+.ant-switch.ant-switch-checked:not(.ant-switch-disabled) {
+  background: $primaryColor !important;
+}
+
+input::placeholder {
+  color: $gray3 !important;
+  opacity: 1; /* Firefox */
+}
+
+input::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: $gray3 !important;
+}
+
+// select
+.customStyle__control {
+  height: auto !important;
+  border: 1px solid $gray4 !important;
+  border-radius: 4px !important;
+
+  .customStyle__value-container {
+    padding: 0 !important;
+    padding: 0.75rem !important;
+    .customStyle__placeholder {
+      margin: 0 !important;
+      color: $gray3 !important;
+    }
+    .customStyle__input-container {
+      margin: 0 !important;
+    }
+  }
+}
+.customStyle__single-value {
+  font-size: #{$font16}rem !important;
+}
+.dark {
+  .customStyle__control {
+    border: 1px solid $black !important;
+  }
+}
+
+.ant-input-password {
+  .anticon {
+    color: $black !important;
+    svg {
+      width: 1rem;
+      display: flex;
+      height: auto;
+      path {
+        color: $black !important;
+      }
+    }
+  }
+}
+.checkboxText {
+  display: flex;
+  gap: 0.8rem;
+}
+.ant-checkbox-inner {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  border: 1px solid $gray3 !important;
+  border-radius: 4px !important;
+
+  &:after {
+    inset-inline-start: 30% !important;
+    width: 6px !important;
+    height: 12px !important;
+    border: 2px solid #fff;
+  }
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: $black !important;
+}

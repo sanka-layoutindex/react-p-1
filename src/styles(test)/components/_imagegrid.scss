@@ -1,0 +1,38 @@
+.imageGridCardWrapper {
+  .imageGridCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+    .imageWrapper {
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .imageGridDescriptionWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+      .textXlarge {
+        @include responsiveToUp(lg) {
+          font-size: #{$font20}rem !important;
+        }
+      }
+      .textMedium {
+        line-height: 1.1 !important;
+
+        &.mobile {
+          @include responsiveToUp(md) {
+            display: none;
+          }
+        }
+        @include responsiveToUp(lg) {
+          font-size: #{$font16}rem !important;
+        }
+      }
+      .antBtnText {
+        margin-top: auto !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.paymentSuccessSection {
+  .paymentSuccessContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    .textSectionWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      .titleWrapper {
+        .text5Xlarge {
+          line-height: 0.8 !important;
+        }
+      }
+      .textWrapper {
+        display: flex;
+        flex-direction: column;
+        .text2Xlarge {
+          line-height: 1 !important;
+        }
+        .link {
+          text-decoration: underline;
+          color: inherit;
+        }
+      }
+      .ant-divider {
+        margin: 0 !important;
+        border-block-start: 1px solid $gray4;
+      }
+    }
+
+    .bookingDetailWrapper {
+      .bookingDetailGrid {
+        display: grid;
+        grid-template-columns: 0.2fr 0.8fr;
+        gap: 2rem;
+        .ratioImageWrapper {
+          overflow: hidden;
+          border-radius: 4px;
+        }
+        .detailsWrapper {
+          padding: 0.75rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.75rem;
+          .reservationTag {
+          }
+          .titleWrapper {
+          }
+          .tripDetailsRow {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2rem;
+            .tripDataWrapper {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 1rem;
+              .textWrapper {
+                .title {
+                  display: flex;
+                  flex-direction: column;
+                }
+              }
+              .arrowWrapper {
+                width: 0.75rem;
+                height: 0.75rem;
+                min-width: 0.75rem;
+                min-height: 0.75rem;
+                svg {
+                  width: auto;
+                  height: 100%;
+                }
+              }
+            }
+          }
+          .ant-divider {
+            margin: 0 !important;
+          }
+          .paymentRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          .actionRow {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.5rem;
+          }
+        }
+      }
+    }
+    .ant-divider {
+      margin: 0 !important;
+    }
+  }
+}

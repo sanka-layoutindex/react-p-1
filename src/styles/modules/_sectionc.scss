@@ -1,0 +1,26 @@
+.section_c{
+    .heading{
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .boxes{
+        background-color: #F9F0FB;
+        border-radius: 20px;
+        padding: 60px 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+
+        .card {
+            border: none;
+            background-color: transparent !important;
+
+            img {
+                padding-left: 15px;
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+}

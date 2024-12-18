@@ -1,0 +1,107 @@
+.ant-modal-close-x {
+  color: $black !important;
+}
+
+.ant-modal-root .ant-modal-wrap {
+  z-index: 99999999 !important;
+}
+
+.ant-modal .ant-modal-content {
+  background-color: $gray2 !important;
+  padding: 2rem !important;
+  display: flex;
+  flex-direction: column;
+  @include responsiveToUp(md) {
+    padding: 0.5rem !important;
+  }
+}
+
+.ant-modal .ant-modal-close {
+  border: 1px solid $gray4 !important;
+  position: unset !important;
+  margin-left: auto !important;
+  margin-bottom: 1rem;
+  background-color: $white !important;
+  &:hover {
+    background-color: $blue3 !important;
+  }
+}
+
+.ant-modal-footer {
+  margin: 0 !important;
+}
+
+.fullwidth {
+  .ant-modal-content {
+    padding: 0 !important;
+    overflow: hidden;
+    .ant-modal-close {
+      position: absolute !important;
+    }
+  }
+}
+.modalWidth {
+  width: 90rem !important;
+  &.free {
+    width: auto !important;
+  }
+  &.small {
+    width: 45vw !important;
+  }
+  &.medium {
+    width: 60vw !important;
+  }
+  &.large {
+    width: 85rem !important;
+  }
+  &.xLarge {
+    width: 100vw !important;
+  }
+}
+.popupXsmall {
+  .ant-modal-header {
+    position: absolute;
+    margin: 0.2rem 0;
+    background: transparent !important;
+    .ant-modal-title {
+      font-size: #{$font20}rem;
+      font-weight: 400;
+    }
+  }
+  .ant-modal-content {
+    border-radius: 4px !important;
+    padding: 0.75rem 0.5rem !important;
+  }
+}
+.popupSmall {
+  .ant-modal-header {
+    position: absolute;
+    margin: 0.2rem 0;
+    background: transparent !important;
+    .ant-modal-title {
+      font-size: #{$font20}rem;
+      font-weight: 400;
+    }
+  }
+  &.titleLarge {
+    .ant-modal-header {
+      position: absolute;
+      margin: 0rem 0;
+      background: transparent !important;
+      .ant-modal-title {
+        font-size: #{$font28}rem;
+        font-weight: 400;
+        line-height: 1 !important;
+      }
+    }
+  }
+  .ant-modal-content {
+    background-color: $white !important;
+    border-radius: 4px !important;
+    padding: 2rem !important;
+  }
+}
+
+.modalWidth .ant-modal-content {
+  margin: 2rem 0;
+}

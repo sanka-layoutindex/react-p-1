@@ -1,0 +1,10 @@
+.section-a{
+    background-color: #F0F2FE;
+    padding: 80px 15px;
+
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}

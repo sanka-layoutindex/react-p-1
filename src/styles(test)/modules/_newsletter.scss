@@ -1,0 +1,142 @@
+.newsLetterWrapper {
+  .newsletterGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    @include responsiveToUp(md) {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    .gridLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      @include responsiveToUp(md) {
+        gap: 0.75rem;
+      }
+      .logoWrapper {
+        img {
+          width: auto;
+          height: 3rem;
+        }
+      }
+      .textWrapper {
+        .text3Xlarge {
+          @include responsiveToUp(md) {
+            font-family: "Jost", sans-serif !important;
+            font-size: #{$font28}rem !important;
+            font-weight: 300 !important;
+            text-transform: initial !important;
+          }
+        }
+      }
+      .imageWrapper {
+        border-radius: 4px;
+        img {
+          width: 100%;
+          height: auto;
+          max-height: auto;
+          object-fit: cover;
+        }
+      }
+    }
+    .gridRight {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-left: 2rem;
+      border-left: 1px solid $gray3;
+      @include responsiveToUp(md) {
+        padding-left: 0;
+        border-top: 1px solid #9696a2;
+        padding-top: 0.75rem;
+        border-left: unset;
+      }
+      .stampImageWrapper {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        @include responsiveToUp(md) {
+          margin-bottom: -6rem;
+        }
+        .stamp {
+          position: absolute;
+          top: 0;
+          right: 0;
+          img {
+            width: 100%;
+            height: auto;
+            max-height: auto;
+            object-fit: cover;
+          }
+        }
+        img {
+          width: auto;
+          height: 8rem;
+          object-fit: cover;
+          @include responsiveToUp(md) {
+            height: 6rem;
+          }
+        }
+      }
+
+      .formItemsWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .formInput {
+          background-color: transparent;
+          // input {
+          // }
+        }
+      }
+      .actionWrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2rem;
+        @include responsiveToUp(md) {
+          margin-top: 0.75rem;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.stateWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  // .textMedium {
+  // }
+  .checkboxWrapper {
+    display: flex;
+    gap: 0.5rem;
+    .ant-radio-group {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .formLabel {
+      border: 1px solid $gray4;
+      padding: 0.875rem;
+      border-radius: 4px;
+      background-color: #fff;
+      display: inline-flex;
+      min-width: 3rem;
+      text-align: center;
+      justify-content: center;
+      &:has(input:checked) {
+        background-color: $blue3 !important;
+      }
+      &::after {
+        display: none !important;
+      }
+    }
+  }
+  .errorMsg {
+    color: $red3 !important;
+    font-size: #{$font14}rem;
+  }
+}

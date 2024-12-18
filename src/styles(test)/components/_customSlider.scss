@@ -1,0 +1,116 @@
+.customSlider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .sliderContentWrapper {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @include responsiveToUp(md) {
+      width: calc(100vw - 1.25rem);
+    }
+  }
+  .sliderNavigationWrapper {
+    margin-left: 6.5rem;
+    @include responsiveToUp(md) {
+    }
+    .commonScrollbar {
+      margin-top: 1rem;
+    }
+  }
+}
+.swiperContainerWrapper {
+  overflow: hidden;
+  width: 50rem;
+  margin-left: -14rem;
+  @include responsiveToUp(md) {
+    width: 30rem;
+    margin-left: -10rem;
+  }
+  .swiperContainer {
+    position: relative;
+    .overlay {
+      position: absolute;
+      inset: 0;
+      width: 16.65rem;
+      height: 100%;
+      z-index: 9;
+      background-color: rgb(255, 255, 255);
+      @include responsiveToUp(md) {
+        width: 10rem;
+      }
+    }
+    .swiper {
+      overflow: hidden !important;
+    }
+    .swiper-slide {
+    }
+
+    .swiper-slide-active {
+      .imageContentWrapper {
+      }
+    }
+
+    .imageContentWrapper {
+      display: flex;
+      width: 22rem;
+      min-width: 22rem;
+      transition: all 0.3s ease-in-out;
+
+      @include responsiveToUp(md) {
+        width: 12rem;
+        min-width: 12rem;
+      }
+      .ratioImageWrapper.Ratio_poster {
+        position: relative;
+        padding-top: 160%;
+
+        border-radius: 4px;
+        overflow: hidden;
+        .overlayWrapper {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 1.25rem;
+          background: linear-gradient(
+            181deg,
+            rgba(0, 0, 0, 0) 20%,
+            rgba(0, 0, 0, 0.64) 100%
+          );
+          height: 5rem;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-end;
+          .textXlarge {
+            @include responsiveToUp(md) {
+              font-size: #{$font16}rem !important;
+              padding: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .swiper-transition {
+//   .swiper-wrapper {
+//     -webkit-transition-timing-function: linear;
+//     -o-transition-timing-function: linear;
+//     transition-timing-function: linear;
+//   }
+// }
+// .customSlider{
+// .swiper-wrapper .swiper-slide {
+//   opacity: 0;
+// }
+
+// .swiper-wrapper > div.swiper-slide-active ~ .swiper-slide,
+// .swiper-wrapper .swiper-slide-active {
+//   opacity: 1;
+// }
+// }

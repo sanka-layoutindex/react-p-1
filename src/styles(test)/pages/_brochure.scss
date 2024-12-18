@@ -1,0 +1,163 @@
+.brochureSection {
+  .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    &.custom {
+      margin-bottom: #{$space56}rem;
+    }
+    h1 {
+      line-height: 1 !important;
+      @include responsiveToUp(lg) {
+        font-size: #{$font72}rem !important;
+        font-weight: 500 !important;
+      }
+    }
+    .textXlarge {
+      @include responsiveToUp(lg) {
+        font-size: #{$font28}rem !important;
+      }
+    }
+  }
+  .brochureGridWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    @include responsiveToUp(md) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .brochureGrid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: #{$space56}rem;
+      .frameWrapper {
+        position: relative;
+        width: fit-content;
+        .tabWrapper {
+          position: relative;
+          width: 100%;
+          width: 22rem;
+          height: auto;
+          display: flex;
+          box-shadow: -10px 0px 20px 1px #00000057;
+          border-radius: 20px;
+          background-color: $white;
+          overflow: hidden;
+          @include responsiveToUp(lg) {
+            width: 15rem;
+          }
+          .tabFrame {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            z-index: 10;
+
+            //
+
+            display: block;
+            background-size: 21rem;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            //
+            @include responsiveToUp(lg) {
+              background-size: 14rem;
+            }
+          }
+          // .tab {
+          //   position: absolute;
+          //   inset: 0;
+          //   width: fill-available;
+          //   height: fill-available;
+          //   width: -webkit-fill-available;
+          //   height: -webkit-fill-available;
+          //   object-fit: contain;
+          //   margin: 25px;
+          //   border-radius: 8px;
+          // }
+        }
+        .mobilePosition {
+          position: absolute;
+          bottom: -1rem;
+          right: -1rem;
+          z-index: 99;
+          .mobileWrapper {
+            position: relative;
+            height: auto;
+            width: 10rem;
+            display: flex;
+            box-shadow: -10px 0px 20px 1px #00000057;
+            border-radius: 20px;
+            background-color: $white;
+            overflow: hidden;
+            @include responsiveToUp(lg) {
+              width: 8rem;
+            }
+
+            .mobileFrame {
+              width: 100%;
+              height: auto;
+              object-fit: contain;
+              z-index: 20;
+
+              //
+
+              display: block;
+              background-size: 9rem;
+              background-repeat: no-repeat;
+              background-position: center;
+
+              //
+              @include responsiveToUp(lg) {
+                background-size: 7rem;
+              }
+            }
+            // .mobile {
+            //   position: absolute;
+            //   inset: 0;
+            //   width: fill-available;
+            //   height: fill-available;
+            //   width: -webkit-fill-available;
+            //   height: -webkit-fill-available;
+            //   object-fit: contain;
+            //   margin: 12px;
+            //   border-radius: 8px;
+            // }
+          }
+        }
+        .bookWrapper {
+          position: relative;
+          width: 21rem;
+          height: auto;
+          display: flex;
+          //   box-shadow: -10px 0px 20px 1px #00000057;
+          border-radius: 4px;
+          background-color: $white;
+          overflow: hidden;
+          box-shadow: -10px 0px 20px 1px #00000057;
+          @include responsiveToUp(lg) {
+            width: 15rem;
+          }
+          .book {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      .actionWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-auto-flow: 0.5rem;
+        .textXlarge {
+        }
+        button {
+        }
+      }
+    }
+  }
+}

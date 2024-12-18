@@ -1,0 +1,528 @@
+.imgDescCardWrapper {
+  @include flexColumnGap(0.5rem);
+  height: 100%;
+  width: 100%;
+  .imageBlockWrapper {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    .ratioImageWrapper.freeSize {
+      @include responsiveToUp(md) {
+        padding-top: 56.25%;
+      }
+      img {
+        height: 100%;
+        @include responsiveToUp(md) {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          inset: 0;
+          object-fit: cover;
+        }
+      }
+    }
+    .favouritsWrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 1rem;
+      z-index: 60;
+      @include responsiveToUp(md) {
+        margin: 0.5rem;
+      }
+      cursor: pointer;
+      button {
+        cursor: pointer;
+      }
+      .favouriteBtn {
+        @include responsiveToUp(md) {
+          width: 2.5rem !important;
+          height: 2.5rem !important;
+          min-width: 2.5rem !important;
+          min-height: 2.5rem !important;
+          padding: 0.2rem !important;
+        }
+      }
+    }
+
+    .textWrapper {
+      position: absolute;
+      bottom: 0;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      z-index: 999;
+
+      @include responsiveToUp(md) {
+        padding: 0.5rem;
+      }
+      .textMedium {
+        @include responsiveToUp(md) {
+          font-size: #{$font16}rem !important;
+        }
+      }
+    }
+
+    .mapWrapper {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 1rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      transition: all 0.4s ease-in-out;
+      margin: 1rem;
+      z-index: 1000;
+      @include responsiveToUp(md) {
+        width: 3rem;
+        height: 3rem;
+        margin: 0.5rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .descBlockWrapper {
+    @include flexColumnGap(0.75rem);
+    flex-grow: 1;
+
+    @include responsiveToUp(lg) {
+      @include flexColumnGap(0.5rem);
+    }
+
+    :first-child {
+      margin-bottom: auto;
+    }
+    &.flexCenter {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1.5rem;
+      @include responsiveToUp(md) {
+        gap: 1rem;
+        justify-content: flex-start;
+      }
+      .titleWrapper {
+        .text2Xlarge {
+          @include responsiveToUp(md) {
+            font-size: #{$font28}rem !important;
+          }
+        }
+        .textMedium {
+          @include responsiveToUp(md) {
+            font-size: #{$font16}rem !important;
+          }
+        }
+      }
+      .descriptionWrapper {
+        .textMedium {
+          @include responsiveToUp(md) {
+            font-size: #{$font16}rem !important;
+          }
+        }
+      }
+    }
+    .titleWrapper {
+      .text3Xlarge {
+        @include responsiveToUp(xl) {
+          font-family: "Jost", sans-serif !important;
+          font-size: #{$font28}rem !important;
+          font-weight: 300 !important;
+          text-transform: initial !important;
+          line-height: 1 !important;
+        }
+      }
+      .textXlarge {
+        @include responsiveToUp(lg) {
+          font-size: #{$font20}rem !important;
+        }
+      }
+      .text2Xlarge {
+        @include responsiveToUp(lg) {
+          font-size: #{$font20}rem !important;
+        }
+      }
+    }
+    .detailsWrapper {
+      @include flexBetween;
+      gap: 1rem;
+
+      .textMedium {
+        @include responsiveToUp(md) {
+          font-size: #{$font16}rem !important;
+        }
+      }
+
+      .arrivalWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+        .iconWrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1rem;
+          height: 1rem;
+          min-width: 1rem;
+          svg {
+            display: flex;
+            margin: unset;
+          }
+        }
+      }
+    }
+    .iconContentWrapper {
+      @include flexCenterGap(1.5rem);
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      @include responsiveToUp(lg) {
+        @include flexCenterGap(0.5rem);
+      }
+      .iconItemWrapper {
+        @include flexCenterGap(0.5rem);
+        @include responsiveToUp(lg) {
+          @include flexCenterGap(0.25rem);
+        }
+        align-items: center;
+        .icon {
+          display: flex;
+          width: 1rem;
+          height: 1rem;
+          &.large {
+            width: #{$font24}rem;
+            height: #{$font24}rem;
+            @include responsiveToUp(lg) {
+              width: #{$font16}rem;
+              height: #{$font16}rem;
+            }
+          }
+          &.medium {
+            width: #{$font20}rem;
+            height: #{$font20}rem;
+          }
+        }
+        .textLarge,
+        .textXlarge {
+          display: flex;
+          align-items: center;
+          line-height: normal;
+          @include responsiveToUp(lg) {
+            font-size: #{$font16}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font16}rem !important;
+          }
+          span {
+            display: flex;
+            align-items: center;
+            line-height: normal;
+          }
+        }
+        .textMedium {
+          @include responsiveToUp(xl) {
+            font-size: #{$font16}rem !important;
+          }
+        }
+        .textFlex {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          text-wrap: nowrap;
+          white-space: nowrap;
+          @include responsiveToUp(lg) {
+            gap: 0.25rem;
+          }
+          span {
+            display: flex;
+            align-items: center;
+            line-height: normal;
+          }
+        }
+        .arrowIcon {
+          width: 1.5rem;
+          height: 1.5rem;
+          display: flex;
+          svg {
+            display: flex;
+            margin: unset;
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .priceWrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px solid $gray4;
+      border-bottom: 1px solid $gray4;
+      padding: 0.5rem 0;
+      @include responsiveToUp(lg) {
+        padding: 0.25rem 0;
+      }
+      .textWrapper {
+        .textMedium {
+          @include responsiveToUp(xl) {
+            font-size: #{$font16}rem !important;
+          }
+        }
+      }
+      .price {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        justify-content: flex-end;
+        align-items: center;
+        // @include responsiveToUp(xl) {
+        //   flex-direction: column;
+        //   align-items: flex-end;
+        //   gap: 0rem;
+        // }
+        @include responsiveToUp(md) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0rem;
+        }
+        .showPriceText {
+          text-decoration: line-through;
+          font-size: #{$font20}rem !important;
+          font-weight: 300;
+          line-height: 1 !important;
+          text-wrap: nowrap;
+          white-space: nowrap;
+          @include responsiveToUp(xl) {
+            font-size: #{$font16}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font16}rem !important;
+          }
+        }
+        .priceText {
+          font-size: #{$font28}rem !important;
+          font-weight: 300;
+          line-height: 1 !important;
+          text-wrap: nowrap;
+          white-space: nowrap;
+          @include responsiveToUp(lg) {
+            font-size: #{$font28}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font20}rem !important;
+          }
+        }
+        &.textLarge {
+          .showPriceText {
+            text-decoration: line-through;
+            font-size: #{$font26}rem !important;
+            font-weight: 300;
+            text-wrap: nowrap;
+            white-space: nowrap;
+            @include responsiveToUp(xl) {
+              font-size: #{$font16}rem !important;
+            }
+            @include responsiveToUp(md) {
+              font-size: #{$font16}rem !important;
+            }
+          }
+          .priceText {
+            font-size: #{$font38}rem !important;
+            font-weight: 300;
+            line-height: 1 !important;
+            text-wrap: nowrap;
+            white-space: nowrap;
+            @include responsiveToUp(lg) {
+              font-size: #{$font28}rem !important;
+            }
+            @include responsiveToUp(md) {
+              font-size: #{$font20}rem !important;
+            }
+          }
+        }
+      }
+    }
+    .tagWrapper {
+      @include responsiveToUp(md) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .DescWrapper {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      .textMedium {
+        @include responsiveToUp(md) {
+          font-size: #{$font16}rem !important;
+        }
+      }
+    }
+    .cardActionWrapper {
+      margin-top: auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      @include responsiveToUp(md) {
+        justify-content: center;
+      }
+      &.flexNormal {
+        margin-top: unset;
+        display: flex;
+        justify-content: flex-start;
+        @include responsiveToUp(md) {
+          margin-top: auto;
+        }
+      }
+      &.couple {
+        @include responsiveToUp(md) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.5rem;
+        }
+        button,
+        .antBtn {
+          @include responsiveToUp(md) {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &.horizontal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 4px;
+    gap: 0;
+    width: 100%;
+    // min-height: 30rem;
+    @include responsiveToUp(md) {
+      display: flex;
+      flex-direction: column;
+    }
+    .descBlockWrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background-color: $gray2;
+      @include responsiveToUp(md) {
+        padding: 1rem 0.75rem;
+        // background-color: transparent;
+      }
+      &.noBg {
+        background-color: unset;
+      }
+      &.mobile {
+        @include responsiveToUp(md) {
+          background-color: $gray2;
+        }
+      }
+      :first-child {
+        margin-bottom: unset;
+      }
+
+      .priceWrapper .price {
+        @include responsiveToUp(xl) {
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        @include responsiveToUp(md) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0rem;
+        }
+      }
+    }
+  }
+  &.horizontalSmall {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 4px;
+    gap: 0;
+    height: auto;
+    min-height: 20rem;
+
+    @include responsiveToUp(lg) {
+      grid-template-columns: 1fr 1fr;
+      min-height: 15rem;
+    }
+    @include responsiveToUp(md) {
+      display: flex;
+      flex-direction: column;
+      min-width: 22rem;
+      width: 100%;
+    }
+    @include responsiveToUp(sm) {
+      display: flex;
+      flex-direction: column;
+      min-width: 18rem;
+    }
+    .descBlockWrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background-color: $gray2;
+      @include responsiveToUp(md) {
+        padding: 0.75rem 0;
+        background-color: transparent;
+      }
+      :first-child {
+        margin-bottom: unset;
+      }
+      &.noBg {
+        background-color: unset;
+        padding: 0.75rem 2rem;
+        @include responsiveToUp(xl) {
+          padding: 0.75rem;
+        }
+        @include responsiveToUp(md) {
+          padding: 0.75rem 0;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.hoverArea {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  @include responsiveToUp(md) {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+  }
+  &:hover {
+    + .mapWrapper {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+}
+.imageBlockWrapper:has(.hoverArea:hover) {
+  .imageSliderWrapper {
+    opacity: 0;
+  }
+}
+.imageSliderWrapper {
+  filter: brightness(0.9);
+}

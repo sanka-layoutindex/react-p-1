@@ -1,0 +1,802 @@
+.homeSearchWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  padding-bottom: 10rem;
+  &.sticky {
+    @include responsiveToUp(md) {
+      z-index: -1;
+    }
+  }
+  @include responsiveToUp(lg) {
+    padding-bottom: 15rem;
+  }
+  @include responsiveToUp(md) {
+    padding-bottom: 18rem;
+  }
+  .homeSearchSticky {
+    position: absolute;
+    left: 0;
+    right: 0;
+    // top: -10rem;
+    top: 0rem;
+    will-change: top;
+    transition: top 0.3s ease;
+    @include responsiveToUp(lg) {
+    }
+    @include responsiveToUp(md) {
+    }
+    .searchContentWrapper {
+      @include responsiveToUp(md) {
+        display: flex;
+        padding: 0.75rem;
+      }
+      &.sticky {
+        display: flex;
+        @include responsiveToUp(md) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// .homeSearchWrapper {
+//   position: sticky;
+//   top: 0;
+//   z-index: 999;
+//   margin-top: -12rem;
+//   margin-bottom: calc(12rem - 82px);
+//   @include responsiveToUp(xxxl) {
+//     margin-top: -11rem;
+//     margin-bottom: calc(11rem - 82px);
+//   }
+//   @include responsiveToUp(xxl) {
+//     margin-top: -10rem;
+//     margin-bottom: calc(8rem - 76px);
+//   }
+//   @include responsiveToUp(xl) {
+//     margin-top: -11rem;
+//     margin-bottom: calc(11rem - 76px);
+//   }
+//   @include responsiveToUp(xl) {
+//     margin-top: -14rem;
+//     margin-bottom: calc(13rem - 147px);
+//   }
+//   @include responsiveToUp(md) {
+//     margin-top: -20rem;
+//     margin-bottom: calc(13rem - 147px);
+//   }
+// }
+
+.searchContentWrapper {
+  //   margin-top: -15rem;
+  &.inner {
+    @include responsiveToUp(md) {
+      display: none;
+    }
+  }
+
+  .searchContentItems {
+    .searchContainerGrid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 0.1fr;
+      gap: 0.5rem;
+      padding-bottom: 0.5rem;
+      @include responsiveToUp(lg) {
+        display: flex;
+        flex-direction: column;
+        position: unset;
+      }
+      &.inner {
+        @include responsiveToUp(lg) {
+          display: flex;
+          flex-direction: row;
+          position: unset;
+        }
+        .searchActionWrapper {
+          @include responsiveToUp(lg) {
+            min-width: 5rem;
+          }
+        }
+      }
+      .searchContainerSecondaryGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+        width: 100%;
+        @include responsiveToUp(lg) {
+          position: relative;
+          gap: 0.3rem;
+        }
+        @include responsiveToUp(md) {
+          grid-template-columns: 1fr;
+        }
+        .searchDropdownWrapper {
+          overflow: hidden;
+          border-radius: 4px;
+          &.inner {
+            border: 2px solid $gray1;
+            &:hover {
+              background-color: $blue3;
+              .dropdownToggle {
+                // border-color: $blue3;
+              }
+            }
+          }
+          .dropdown {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              background-color: $blue3;
+              .dropdownToggle {
+                // border-color: $blue3;
+              }
+            }
+            .dropdownToggle {
+              width: 100%;
+              border-radius: 4px;
+              padding: 1rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 0.5rem;
+              // border: 3px solid $gray1;
+              @include responsiveToUp(xl) {
+                padding: 0.875rem 0.75rem;
+              }
+              cursor: pointer;
+
+              &.active {
+                background-color: $blue3;
+                // border: 3px solid $primaryColor;
+              }
+              .textWrapper {
+                display: flex;
+                flex-direction: column;
+                span {
+                  line-height: 1.1 !important;
+                  color: $gray6;
+                }
+                .textXsmall {
+                }
+                .textMedium {
+                  @include responsiveToUp(xl) {
+                    font-size: #{$font16}rem !important;
+                  }
+                }
+              }
+              .closeWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 1.25rem;
+                svg {
+                  display: flex;
+                  width: auto;
+                  height: 100%;
+                }
+              }
+            }
+          }
+          .dropdownContainerGrid {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            display: grid;
+            grid-template-columns: 1fr 0.1fr;
+            gap: 0.5rem;
+            z-index: 99;
+            &.fullWidth {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 0rem;
+            }
+            @include responsiveToUp(lg) {
+              padding-top: 0.3rem;
+              grid-template-columns: 1fr;
+            }
+            @include responsiveToUp(md) {
+              display: none !important;
+            }
+            .dropdownWrapper {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              gap: 0.5rem;
+              &.fullWidth {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0rem;
+              }
+              @include responsiveToUp(lg) {
+                grid-template-columns: 1fr;
+                gap: 0;
+              }
+              .dropdownMenu {
+                animation: dropdown 0.2s ease-out;
+                box-shadow: 0px 4px 36px 0px #00000040;
+                padding: 1rem;
+                border-radius: 4px;
+                background-color: $white;
+                &.date {
+                  margin: 0 4rem;
+                  padding: 0;
+                  @include responsiveToUp(xl) {
+                    margin: 0;
+                  }
+                }
+                &.port {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.25rem;
+                }
+              }
+            }
+            .placeholder {
+              min-width: 12rem;
+            }
+          }
+        }
+      }
+      .searchActionWrapper {
+        min-width: 12rem;
+
+        button {
+          border-radius: 4px !important;
+          overflow: hidden;
+          padding: 1rem !important;
+          height: 100% !important;
+          width: 100%;
+          @include responsiveToUp(xl) {
+            font-size: #{$font20}rem !important;
+          }
+          span {
+            display: flex;
+            @include responsiveToUp(lg) {
+              // display: none;
+            }
+          }
+          .icon {
+            // display: none;
+            @include responsiveToUp(lg) {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+
+    // inner page destination strt
+    .searchContainerGrid.destination {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 0.1fr;
+      gap: 0.5rem;
+      padding: 1rem 0rem !important;
+      @include responsiveToUp(lg) {
+        display: flex;
+        flex-direction: column;
+        position: unset;
+      }
+      .searchActionWrapper {
+        @include responsiveToUp(lg) {
+          min-width: 5rem;
+        }
+      }
+
+      .searchContainerSecondaryGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        width: 100%;
+        @include responsiveToUp(lg) {
+          position: relative;
+          gap: 0.3rem;
+        }
+        @include responsiveToUp(md) {
+          grid-template-columns: 1fr;
+        }
+        .searchDropdownWrapper {
+          overflow: hidden;
+          border-radius: 4px;
+          border: 2px solid $gray1;
+          &:hover {
+            background-color: $blue3;
+            .dropdownToggle {
+              // border-color: $blue3;
+            }
+          }
+
+          .dropdown {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              background-color: $blue3;
+              .dropdownToggle {
+                // border-color: $blue3;
+              }
+            }
+            .dropdownToggle {
+              width: 100%;
+              border-radius: 4px;
+              padding: 1rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 0.5rem;
+              // border: 3px solid $gray1;
+              @include responsiveToUp(xl) {
+                padding: 0.875rem 0.75rem;
+              }
+              cursor: pointer;
+
+              &.active {
+                background-color: $blue3;
+                // border: 3px solid $primaryColor;
+              }
+              .textWrapper {
+                display: flex;
+                flex-direction: column;
+                span {
+                  line-height: 1.1 !important;
+                  color: $gray6;
+                }
+                .textXsmall {
+                }
+                .textMedium {
+                  @include responsiveToUp(xl) {
+                    font-size: #{$font16}rem !important;
+                  }
+                }
+              }
+              .closeWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 1.25rem;
+                svg {
+                  display: flex;
+                  width: auto;
+                  height: 100%;
+                }
+              }
+            }
+          }
+          .dropdownContainerGrid {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            display: grid;
+            grid-template-columns: 1fr 0.1fr;
+            gap: 0.5rem;
+            z-index: 99;
+            &.fullWidth {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 0rem;
+            }
+            @include responsiveToUp(lg) {
+              padding-top: 0.3rem;
+              grid-template-columns: 1fr;
+            }
+            @include responsiveToUp(md) {
+              display: none !important;
+            }
+            .dropdownWrapper {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0.5rem;
+              &.fullWidth {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0rem;
+              }
+              @include responsiveToUp(lg) {
+                grid-template-columns: 1fr;
+                gap: 0;
+              }
+              .dropdownMenu {
+                animation: dropdown 0.2s ease-out;
+                box-shadow: 0px 4px 36px 0px #00000040;
+                padding: 1rem;
+                border-radius: 4px;
+                background-color: $white;
+                &.date {
+                  margin: 0 4rem;
+                  padding: 0;
+                  @include responsiveToUp(xl) {
+                    margin: 0;
+                  }
+                }
+                &.port {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.25rem;
+                }
+              }
+            }
+            .placeholder {
+              min-width: 12rem;
+            }
+          }
+        }
+      }
+      .searchActionWrapper {
+        min-width: 12rem;
+
+        button {
+          border-radius: 4px !important;
+          overflow: hidden;
+          padding: 1rem !important;
+          height: 100% !important;
+          width: 100%;
+          @include responsiveToUp(xl) {
+            font-size: #{$font20}rem !important;
+          }
+          span {
+            display: flex;
+            @include responsiveToUp(lg) {
+              // display: none;
+            }
+          }
+          .icon {
+            // display: none;
+            @include responsiveToUp(lg) {
+              display: flex;
+            }
+          }
+        }
+        button {
+          @include responsiveToUp(xl) {
+            font-size: #{$font20}rem !important;
+          }
+          span {
+            display: flex !important;
+            @include responsiveToUp(lg) {
+              display: none !important;
+            }
+          }
+          .icon {
+            display: none !important;
+            @include responsiveToUp(lg) {
+              display: flex !important;
+            }
+          }
+        }
+      }
+    }
+    // inner page destination end
+  }
+
+  .searchContainerGrid.inner {
+    button {
+      @include responsiveToUp(xl) {
+        font-size: #{$font20}rem !important;
+      }
+      span {
+        display: flex !important;
+        @include responsiveToUp(lg) {
+          display: none !important;
+        }
+      }
+      .icon {
+        display: none !important;
+        @include responsiveToUp(lg) {
+          display: flex !important;
+        }
+      }
+    }
+  }
+
+  // stikey
+
+  &.sticky {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    opacity: 1;
+    border-bottom: 1px solid $gray4;
+    background-color: $white;
+    background-color: #fafafa;
+    transition: all 0.3s ease-in-out;
+    @include responsiveToUp(md) {
+      opacity: 0;
+      margin-top: 3rem;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .searchContentItems {
+      .searchContainerGrid {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 0.05fr;
+        gap: 0rem;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        @include responsiveToUp(lg) {
+          position: relative;
+        }
+        .searchContainerSecondaryGrid {
+          border: 2px solid $primaryColor;
+          border-radius: 4px 0 0 4px;
+          gap: 0rem;
+          width: 100%;
+          @include responsiveToUp(lg) {
+            position: unset;
+          }
+          .searchDropdownWrapper {
+            border-radius: 0px;
+            &:nth-child(2) {
+              border-left: 2px solid $primaryColor;
+              border-right: 2px solid $primaryColor;
+            }
+            .dropdown {
+              width: 100%;
+              background-color: $white;
+
+              .dropdownToggle {
+                border-radius: 0px;
+                padding: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0rem;
+                border: 0px solid transparent;
+                cursor: pointer;
+
+                &.active {
+                  background-color: $blue3;
+                  border: 0px solid transparent;
+                }
+                .textWrapper {
+                  display: flex;
+                  flex-direction: column;
+                  span {
+                    line-height: 1.1 !important;
+                    color: $gray6;
+                  }
+                }
+                .closeWrapper {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 1.25rem;
+                  svg {
+                    display: flex;
+                    width: auto;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+            .dropdownContainerGrid {
+              position: absolute;
+              top: 100%;
+              left: 0;
+              right: 0;
+              display: grid;
+              grid-template-columns: 1fr 0.05fr;
+              gap: 0rem;
+              z-index: 99;
+              &.fullWidth {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0rem;
+              }
+              @include responsiveToUp(lg) {
+                padding-top: 0rem;
+                grid-template-columns: 1fr;
+              }
+              .dropdownWrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 0rem;
+                &.fullWidth {
+                  display: grid;
+                  grid-template-columns: 1fr;
+                  gap: 0rem;
+                }
+                @include responsiveToUp(lg) {
+                  grid-template-columns: 1fr;
+                  gap: 0;
+                }
+              }
+              .placeholder {
+                min-width: 4rem;
+              }
+            }
+          }
+        }
+        .searchActionWrapper {
+          min-width: 4rem;
+
+          button {
+            height: 100% !important;
+            width: 100%;
+            border-radius: 0 4px 4px 0 !important;
+            padding: 1rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// destinationList
+
+.destinationList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  row-gap: 0.25rem;
+  @include responsiveToUp(lg) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include responsiveToUp(md) {
+    overflow: auto;
+    max-height: 55vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+// month list
+
+.yearsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include responsiveToUp(md) {
+    grid-template-columns: 1fr;
+    max-height: 55vh;
+    overflow: auto;
+    padding: 0 1rem;
+    max-width: 60%;
+    margin: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  @include responsiveToUp(sm) {
+    overflow: auto;
+    padding: 0;
+    max-width: 1000%;
+    margin: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .yearCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    &:nth-child(2) {
+      border-left: 1px solid $gray4;
+      border-right: 1px solid $gray4;
+    }
+    @include responsiveToUp(xl) {
+      padding: 1rem 1rem;
+    }
+    @include responsiveToUp(md) {
+      border: unset !important;
+    }
+    .title {
+      text-align: center;
+      span {
+        line-height: 1 !important;
+      }
+      @include responsiveToUp(xl) {
+      }
+    }
+    .monthsWrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      @include responsiveToUp(lg) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @include responsiveToUp(md) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      gap: 0.5rem;
+      .monthLabel {
+        width: auto;
+        min-width: 3rem;
+        height: 3rem;
+        @include flexCentered;
+        padding: 0.5rem;
+        @include responsiveToUp(xl) {
+          width: auto;
+          min-width: 2.5rem;
+          height: 2.5rem;
+        }
+        @include responsiveToUp(md) {
+          background-color: transparent;
+        }
+        .formLabelName {
+          @include responsiveToUp(xl) {
+            font-size: #{$font16}rem !important ;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobileStickySection {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: $gray2;
+  border-bottom: 1px solid $gray4;
+  padding: 0rem;
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
+  animation: dropdown 0.2s ease-in-out;
+  @include responsiveTo(md) {
+    display: none;
+  }
+  &.stickyMobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    opacity: 1;
+    overflow: hidden;
+    padding: 0.5rem;
+    max-height: 100%;
+  }
+  &.inner {
+    display: none;
+    border-bottom: unset;
+
+    @include responsiveToUp(md) {
+      display: flex;
+      justify-content: flex-start;
+      z-index: 999;
+      opacity: 1;
+      overflow: hidden;
+      padding: 0.5rem;
+      max-height: 100%;
+      width: fit-content;
+      margin-bottom: -2.6rem;
+    }
+  }
+}
+
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// z index handler
+.homeSearchWrapper:has(.searchDropdownWrapper .dropdownWrapper .dropdownMenu) {
+  z-index: 999 !important;
+}

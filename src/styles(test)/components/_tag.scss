@@ -1,0 +1,53 @@
+.tagWrapper {
+  .tagItem {
+    @include flexCentered;
+    width: fit-content;
+    font-size: #{$font16}rem !important;
+    color: $black1;
+    border-radius: 100vh;
+    background-color: $red2;
+    padding: 4px 10px !important;
+    line-height: normal !important;
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+
+    span {
+      white-space: nowrap;
+    }
+    .iconWrapper {
+      width: 0.875rem;
+      height: 0.875rem;
+      svg {
+        width: auto;
+        height: 100%;
+      }
+    }
+    // text-transform: uppercase;
+    @include responsiveToUp(md) {
+      font-size: #{$font12}rem !important;
+    }
+    &.small {
+      font-size: #{$font12}rem !important;
+    }
+    &.normal {
+      font-size: #{$font16}rem !important;
+      @include responsiveToUp(md) {
+        font-size: #{$font12}rem !important;
+      }
+    }
+    &.medium {
+      font-size: #{$font20}rem !important;
+      @include responsiveToUp(md) {
+        font-size: #{$font16}rem !important;
+      }
+    }
+    &.yellow {
+      background-color: $yellow;
+    }
+    &.pink {
+      background-color: $red1;
+      color: $gray8 !important;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.cardGrid {
+  @include responsiveToUp(lg) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include responsiveToUp(md) {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.cardGridWrapper {
+  .cardGrid {
+    display: grid;
+    gap: 2rem;
+    @include responsiveToUp(lg) {
+      gap: 1rem;
+    }
+    @include responsiveToUp(md) {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &.gridSmall {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      @include responsiveToUp(lg) {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      .imgDescCardWrapper {
+        @include responsiveToUp(lg) {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          flex: 0 0 auto;
+          width: 266px;
+          scroll-snap-align: start;
+          height: auto;
+        }
+      }
+    }
+    &.gridMedium {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &.gridLarge {
+      grid-template-columns: 1fr 1fr;
+    }
+    .imgDescCardWrapper {
+      @include responsiveToUp(md) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex: 0 0 auto;
+        width: 250px;
+        scroll-snap-align: start;
+        height: auto;
+      }
+    }
+  }
+}

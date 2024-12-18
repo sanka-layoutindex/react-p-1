@@ -1,0 +1,423 @@
+.textAreaWrapper {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .titleWrapper {
+    .text5Xlarge {
+      @include responsiveToUp(xl) {
+        font-size: #{$font48}rem !important;
+        text-align: center;
+      }
+      @include responsiveToUp(md) {
+        font-size: #{$font48}rem !important;
+        text-align: center;
+      }
+    }
+  }
+  .descWrapper {
+    max-width: 75rem;
+    margin: auto;
+    @include responsiveToUp(xl) {
+      max-width: 80%;
+    }
+    @include responsiveToUp(md) {
+      max-width: 100%;
+    }
+    .textMedium {
+      @include responsiveToUp(xl) {
+        font-size: #{$font16}rem !important;
+      }
+      @include responsiveToUp(md) {
+        font-size: #{$font16}rem !important;
+      }
+    }
+  }
+  .sectionActionWrapper {
+    position: absolute;
+    right: -6rem;
+    top: 50%;
+    transform: translate(0%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    @include responsiveToUp(xxl) {
+      right: -4rem;
+    }
+    @include responsiveToUp(xl) {
+      right: 0rem;
+    }
+    @include responsiveToUp(md) {
+      position: unset;
+      transform: unset;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+.mapSectioWrapper {
+  display: contents;
+  .mapSectionHeaderWrapper {
+    position: sticky;
+    z-index: 999;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 0;
+    background-color: $primaryColor;
+    @include responsiveToUp(xl) {
+      height: auto;
+      padding: 1.25rem 2rem;
+    }
+    @include responsiveToUp(md) {
+      height: auto;
+      padding: 0.75rem 0;
+    }
+    .paddingGlobal {
+      width: 100%;
+    }
+    .iconContentWrapper {
+      @include flexCenterGap(1.5rem);
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      @include responsiveToUp(xl) {
+        gap: 0.5rem;
+      }
+      @include responsiveToUp(md) {
+        display: flex;
+        flex-direction: column;
+      }
+      .iconItemWrapper {
+        @include flexCenterGap(0.5rem);
+        align-items: center;
+        .icon {
+          display: flex;
+          width: 1rem;
+          height: 1rem;
+          color: $gray2;
+        }
+        .textLarge {
+          @include responsiveToUp(xl) {
+            font-size: #{$font20}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font16}rem !important;
+          }
+          span {
+            display: flex;
+            align-items: center;
+          }
+        }
+        .textFlex {
+          display: flex;
+          gap: 0.5rem;
+          text-wrap: nowrap;
+          white-space: nowrap;
+        }
+        .arrowIcon {
+          width: 1.5rem;
+          height: 1.5rem;
+          display: flex;
+          svg {
+            display: flex;
+            margin: unset;
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+      .textWrapper {
+        @include responsiveToUp(xl) {
+          display: none;
+        }
+        @include responsiveToUp(md) {
+          display: none;
+        }
+        .textLarge {
+          color: $white;
+        }
+      }
+      // .actionWrapper {
+      // }
+    }
+  }
+
+  .mapStickySectionWrapper {
+    margin-top: -6.5rem;
+    z-index: 50;
+    height: 4rem;
+    overflow: hidden;
+    // opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.25rem 0;
+    background-color: $primaryColor;
+    transition: all 0.2s ease-in-out;
+    @include responsiveToUp(xl) {
+      display: none;
+    }
+    @include responsiveToUp(md) {
+      display: none;
+    }
+    // &.sticky {
+    //   //   opacity: 1;
+    // }
+    .paddingGlobal {
+      width: 100%;
+    }
+    .mapStickySection {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .locationDetailsWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+        .imageWrapper {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 2px;
+          overflow: hidden;
+        }
+        .detailsWrapper {
+          // .title {
+          //   .textMedium {
+          //   }
+          // }
+          .desc {
+            .iconContentWrapper {
+              @include flexCenterGap(1.5rem);
+              justify-content: space-between;
+              flex-wrap: wrap;
+              row-gap: 0.5rem;
+              .iconItemWrapper {
+                @include flexCenterGap(0.5rem);
+                align-items: center;
+                .icon {
+                  display: flex;
+                  width: 1rem;
+                  height: 1rem;
+                  color: $gray2;
+                }
+                .textNormal {
+                  @include responsiveToUp(md) {
+                    font-size: #{$font16}rem !important;
+                  }
+                  span {
+                    display: flex;
+                    align-items: center;
+                  }
+                }
+                .textFlex {
+                  display: flex;
+                  gap: 0.5rem;
+                  text-wrap: nowrap;
+                  white-space: nowrap;
+                }
+                .arrowIcon {
+                  width: 1.5rem;
+                  height: 1.5rem;
+                  display: flex;
+                  svg {
+                    display: flex;
+                    margin: unset;
+                    width: auto;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .sectionJumpActionWrapper {
+        .jumpActionLinksWrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 1rem;
+          @include responsiveToUp(xxl) {
+            gap: 1rem;
+          }
+          @include responsiveToUp(xl) {
+            gap: 1rem;
+          }
+          .jumpActionLink {
+            a {
+              display: inline-flex;
+              padding: 0.5rem !important;
+              transition: all 0.2s ease-in-out;
+              color: $white;
+              border-radius: 4px;
+              font-size: #{$font16}rem;
+              &:hover {
+                background-color: $gray1;
+                color: $blue5;
+              }
+            }
+            // .actionWrapper {
+            // }
+          }
+        }
+      }
+    }
+  }
+  .imageMapWrapper {
+    .ratioImageWrapper {
+      height: 75vh;
+      @include responsiveToUp(md) {
+        height: 40vh;
+      }
+      // img {
+      // }
+    }
+  }
+}
+
+.detailsTableWrapper {
+  overflow-x: auto;
+  .tableRow {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    border-bottom: 1px solid $gray4;
+    padding: 1.25rem 0;
+    @include responsiveToUp(md) {
+      grid-template-columns: repeat(4, 1fr);
+      width: fit-content;
+    }
+    .tableCol {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      &:nth-child(1) {
+        min-width: 6rem;
+      }
+      &:nth-child(2) {
+        min-width: 10rem;
+      }
+      &:nth-child(3) {
+        min-width: 20rem;
+      }
+      &:nth-child(4) {
+        min-width: 18rem;
+      }
+      // &:last-child {
+      //   // text-align: end;
+      //   // display: flex;
+      //   // justify-content: flex-end;
+      // }
+      .textMedium {
+        @include responsiveToUp(xl) {
+          font-size: #{$font16}rem !important;
+        }
+        @include responsiveToUp(md) {
+          font-size: #{$font16}rem !important;
+        }
+      }
+      .textWrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .icon {
+          display: flex;
+          height: 1rem;
+          img {
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        // .textMedium {
+        // }
+      }
+    }
+  }
+}
+.tableRowHandler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  @include responsiveToUp(md) {
+    padding-bottom: 0;
+  }
+}
+
+.excursionsDetailsWrapper {
+  .excursionsDetailsGrid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 3rem;
+    @include responsiveToUp(xl) {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+    @include responsiveToUp(md) {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+    .excursionsDetails {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.75rem;
+      @include responsiveToUp(xl) {
+        gap: 0.75rem;
+      }
+      @include responsiveToUp(md) {
+        gap: 0.75rem;
+      }
+      // .textMedium {
+      // }
+      .titleWrapper {
+        .text5Xlarge {
+          @include responsiveToUp(xl) {
+            font-size: #{$font48}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font48}rem !important;
+          }
+        }
+      }
+      .textXlarge {
+        @include responsiveToUp(xl) {
+          font-size: #{$font20}rem !important;
+        }
+        @include responsiveToUp(md) {
+          font-size: #{$font20}rem !important;
+        }
+      }
+
+      // .textXlarge {
+      // }
+    }
+  }
+}
+
+.conferenceSection {
+  .titleWrapper {
+    // .text3Xlarge {
+    // }
+    .textMedium {
+      font-size: #{$font20}rem !important;
+    }
+  }
+  .headerCenterd {
+    @include responsiveToUp(md) {
+      text-align: left;
+    }
+  }
+}

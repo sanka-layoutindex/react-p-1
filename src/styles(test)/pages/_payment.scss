@@ -1,0 +1,304 @@
+.section {
+  &.paymentSection {
+    background-color: $gray2;
+  }
+  .gridWrapper {
+    &.twoColGrid {
+      display: grid;
+      grid-template-columns: 0.65fr 0.35fr;
+      gap: 2rem;
+      @include responsiveToUp(lg) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    .gridLeft {
+      .sectionHeadWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include responsiveToUp(xl) {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+        .titleWrapper {
+        }
+        .promoCodeWrapper {
+          display: flex;
+          @include responsiveToUp(lg) {
+            width: 100%;
+          }
+          .promoCode {
+            background-color: $blue3;
+            display: flex;
+            flex-direction: row;
+            gap: 1.75rem;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 4px;
+            @include responsiveToUp(lg) {
+              flex: auto;
+            }
+            .form {
+              display: flex;
+              flex-direction: row;
+              gap: 0.25rem;
+              align-items: center;
+              @include responsiveToUp(lg) {
+                flex: auto;
+              }
+              .formItem {
+                width: 100%;
+              }
+              .formInput {
+              }
+            }
+          }
+        }
+      }
+      .ant-divider {
+        margin: 0.75rem 0;
+        border-block-start: 1px solid $gray4;
+      }
+      .paymentDetailsWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+        .paymentDetailsSection {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+          .titleWrapper {
+          }
+          .optionWrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+          }
+          .sidedrawerLinkWrapper {
+            color: $gray3;
+            .sideDrawerOpener {
+              color: $gray3;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .optionBottomWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .textWrapper {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .selectedItemContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .actionWrapper {
+        &.cabinSelect {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1.75rem;
+          margin-top: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+.ant-drawer-content-wrapper {
+  &:has(.paymentDrawer) {
+    width: 50rem !important;
+  }
+}
+.paymentDrawer {
+  display: flex;
+  flex-direction: column;
+  background-color: $gray2 !important;
+  .ant-drawer-header {
+    display: none !important;
+  }
+  .ant-drawer-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+  }
+  .drawerBody {
+    padding: 1.75rem;
+    .leagalNoteWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      .titleWraper {
+        .text3Xlarge {
+          line-height: 1 !important;
+        }
+      }
+      .descWrapper,
+      p {
+        font-size: #{$font16}rem;
+        font-weight: 300 !important;
+        line-height: 1.5 !important;
+      }
+    }
+  }
+  .drawerActionWrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 1.75rem;
+    background-color: $white;
+    margin-top: auto;
+  }
+}
+
+.errorMsgWrapper {
+  background-color: $red1;
+  padding: 1.2rem;
+  border-radius: 16px;
+  .contentWrapper {
+    display: flex;
+    gap: 1.25rem;
+    .iconWrapper {
+      width: 2rem;
+      height: 2rem;
+      min-width: 2rem;
+      min-height: 2rem;
+      svg {
+        width: auto;
+        height: 100%;
+      }
+    }
+    .textWrapper {
+      .titleWrapper {
+        .textXlarge {
+          line-height: 1 !important;
+        }
+      }
+      .descWrapper {
+      }
+    }
+  }
+}
+
+// payment form
+
+.kr-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.kr-field-component {
+  display: flex !important;
+}
+.kr-input-field {
+  padding: 1.25rem 1.75rem !important;
+  width: 100% !important;
+  .kr-input-field {
+    border: unset !important;
+  }
+}
+
+.kr-payment-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jost", sans-serif !important;
+  /* font-optical-sizing: auto; */
+  /* font-style: normal; */
+  color: #fafafa !important;
+  background: #1c284e !important;
+  box-shadow: unset !important;
+  font-size: 1.25rem !important;
+  line-height: 1 !important;
+  height: unset !important;
+  padding: 1rem 1rem !important;
+  border-radius: 4px !important;
+  gap: 0.875rem !important;
+  font-weight: 400 !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease-in-out !important;
+  width: -moz-fit-content;
+  width: 100%;
+  text-wrap: nowrap !important;
+  white-space: nowrap;
+}
+
+.kr-smart-form .kr-embedded .flex-container {
+  flex-direction: row !important;
+  display: flex;
+}
+
+// ------------------
+
+.kr-embedded .kr-field-element:not(.kr-checkbox, .kr-radio),
+.kr-embedded > .kr-field-wrapper {
+  font-family: "Jost", sans-serif !important;
+  font-weight: 400;
+  font-size: #{$font20}rem !important;
+  border: 1px solid $gray4 !important;
+  width: 100% !important;
+  border-radius: 4px !important;
+  padding: 0 !important;
+  height: 3.75rem;
+  &:focus-visible {
+    outline: 1px solid $black !important;
+    outline-offset: unset !important;
+    transition: unset !important;
+  }
+}
+
+.kr-embedded .kr-field-wrapper {
+  display: flex;
+  display: -moz-flex;
+  display: flexbox;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.kr-embedded .kr-pan .kr-icon-wrapper-root {
+  display: none;
+}
+
+.kr-input-field {
+  font-family: "Jost", sans-serif !important;
+  font-weight: 400;
+  font-size: #{$font20}rem !important;
+
+  padding: 1.25rem 1.75rem !important;
+  width: 100% !important;
+  .kr-input-field {
+    border: unset !important;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $black !important;
+    outline-offset: unset !important;
+    transition: unset !important;
+  }
+}
+
+.kr-visibility-button {
+  padding: 1rem !important;
+}
+
+.kr-smart-form {
+  max-width: 25rem;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+}

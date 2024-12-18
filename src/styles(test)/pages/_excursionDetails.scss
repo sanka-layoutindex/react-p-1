@@ -1,0 +1,147 @@
+.excursionIconListWrapper {
+  background-color: $gray2;
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  @include responsiveToUp(md) {
+    overflow: auto;
+  }
+  .excursionIconListItemsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+    padding: 1rem;
+    width: 100%;
+    @include responsiveToUp(md) {
+      gap: 3rem;
+      width: 100%;
+      min-width: max-content;
+    }
+    .excursionIconList {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      align-items: center;
+      .iconWrapper {
+        display: flex;
+        .icon {
+          width: 2rem;
+          height: 2rem;
+          object-fit: contain;
+        }
+      }
+      .textWrapper {
+        display: flex;
+        flex-direction: column;
+
+        .textXsmall {
+          line-height: 1 !important;
+        }
+        .textNormal {
+          line-height: 1.1 !important;
+        }
+      }
+    }
+  }
+}
+.descriptionHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: #{$space56}rem;
+  margin-bottom: #{$space56}rem;
+  @include responsiveToUp(md) {
+    gap: #{$space28}rem;
+    margin-bottom: #{$space28}rem;
+  }
+  .headTextWrapper {
+    .textWrapper {
+      .text5Xlarge {
+        line-height: 1 !important;
+        @include responsiveToUp(md) {
+          font-size: #{$font48}rem !important;
+        }
+      }
+    }
+  }
+  .headSecondaryTextWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $gray6;
+    .textWrapper {
+      .text2Xlarge {
+      }
+    }
+    .flagWrappwer {
+      .flag {
+        width: 2.5rem;
+        height: 1.875rem;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.excursionDescriptionWrapper {
+  .cardDescription {
+    &.colOne {
+      column-count: 1;
+      column-gap: 2rem;
+      text-align: justify;
+    }
+    &.colTwo {
+      column-count: 2;
+      column-gap: 2rem;
+      text-align: justify;
+      @include responsiveToUp(md) {
+        column-count: 1;
+      }
+    }
+  }
+}
+
+.cardGridWrapper {
+  &.customGrid {
+    .cardGrid {
+      display: grid;
+      gap: 2rem;
+      @include responsiveToUp(lg) {
+        gap: 1rem;
+      }
+
+      &.customGridSmall {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include responsiveToUp(md) {
+          grid-template-columns: 1fr 1fr;
+        }
+        .imgDescCardWrapper {
+          @include responsiveToUp(lg) {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 0 0 auto;
+            width: 266px;
+            scroll-snap-align: start;
+            height: auto;
+          }
+        }
+      }
+
+      .imgDescCardWrapper {
+        @include responsiveToUp(md) {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          flex: 0 0 auto;
+          width: 250px;
+          scroll-snap-align: start;
+          height: auto;
+        }
+      }
+    }
+  }
+}

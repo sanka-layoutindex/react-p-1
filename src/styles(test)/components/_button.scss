@@ -1,0 +1,309 @@
+.ant-btn,
+.ant-custom-link {
+  @include flexCentered;
+  @include fontJost;
+  color: $gray2 !important;
+  background: $primaryColor !important;
+  box-shadow: unset !important;
+  font-size: #{$font20}rem !important;
+  line-height: 1 !important;
+  height: unset !important;
+  padding: 1rem 1rem !important;
+  border-radius: 4px !important;
+  gap: 0.875rem !important;
+  font-weight: 400 !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease-in-out !important;
+  width: fit-content;
+  text-wrap: nowrap !important;
+  white-space: nowrap;
+  @include responsiveToUp(lg) {
+    padding: 0.75rem !important;
+    font-size: 1rem !important;
+  }
+  // button varients
+  &.antBtnPrimary {
+    color: $gray2 !important;
+    background: $primaryColor !important;
+    &:hover {
+      background: $blue1 !important;
+    }
+    &:active {
+      background: $blue2 !important;
+    }
+  }
+  &.antBtnSecondary {
+    color: $gray7 !important;
+    background: $white !important;
+    border: 1px solid $gray4 !important;
+    &:hover {
+      background: $blue3 !important;
+    }
+    &:active {
+      background: $blue3 !important;
+    }
+    &.active {
+      background: $blue3 !important;
+    }
+  }
+  &.antBtnDanger {
+    color: $red !important;
+    background: transparent !important;
+    border: 1px solid $red !important;
+    &:hover {
+      background: $red1 !important;
+    }
+    &:active {
+      background: $red1 !important;
+    }
+    &.active {
+      background: $red1 !important;
+    }
+  }
+
+  &.antBtnText {
+    color: $primaryColor !important;
+    background: transparent !important;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    &:hover {
+      background: $gray1 !important;
+    }
+    &:active {
+      background: $blue3 !important;
+    }
+    &.active {
+      background: $blue3 !important;
+    }
+    &:disabled,
+    &.ant-typography-disabled {
+      color: $gray5 !important;
+      background: transparent !important;
+      border: 1px solid transparent !important;
+      &:hover {
+        background: transparent !important;
+      }
+      &:active {
+        background: transparent !important;
+      }
+      &.active {
+        background: transparent !important;
+      }
+    }
+    &.btnLight {
+      color: $gray2 !important;
+      &:hover {
+        color: $primaryColor !important;
+      }
+    }
+  }
+
+  // button sizes
+  &.antBtnLg {
+    gap: 1rem !important;
+    padding: 1.5rem 1.25rem !important;
+    font-size: #{$font28}rem !important;
+    @include responsiveToUp(lg) {
+      padding: 1rem !important;
+      font-size: 1rem !important;
+    }
+    .btnIcon {
+      width: auto;
+      height: #{$font28}rem;
+    }
+  }
+  &.antBtnMd {
+    gap: 0.5rem !important;
+    padding: 1.25rem 0.75rem !important;
+    font-size: #{$font24}rem !important;
+    @include responsiveToUp(lg) {
+      padding: 1rem !important;
+      font-size: 1rem !important;
+    }
+    @include responsiveToUp(md) {
+      gap: 0.25rem !important;
+      padding: 0.5rem 0.75rem !important;
+      font-size: #{$font16}rem !important;
+      .btnIcon {
+        width: auto;
+        height: #{$font16}rem;
+      }
+    }
+    .btnIcon {
+      width: auto;
+      height: #{$font24}rem;
+    }
+  }
+  &.antBtnSm {
+    gap: 0.875rem !important;
+    padding: 0.75rem !important;
+    font-size: #{$font16}rem !important;
+    .btnIcon {
+      width: auto;
+      height: #{$font16}rem;
+    }
+  }
+  &.antBtnXs {
+    gap: 0.25rem !important;
+    padding: 0.5rem 0.5rem !important;
+    font-size: #{$font16}rem !important;
+    .btnIcon {
+      width: auto;
+      height: #{$font16}rem;
+    }
+  }
+  &.w100 {
+    width: 100%;
+  }
+  &.flexBetween {
+    justify-content: space-between !important;
+  }
+  .btnIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: #{$font20}rem;
+    &.arrowDown,
+    &.arrowUp {
+      height: 0.5rem !important;
+    }
+    svg {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  //   button states
+  &:disabled {
+    color: $gray5 !important;
+    background: $gray1 !important;
+    border: 1px solid transparent !important;
+    &:hover {
+      background: $gray1 !important;
+    }
+    &:active {
+      background: $gray1 !important;
+    }
+    &.active {
+      background: $gray1 !important;
+    }
+  }
+  &:focus-visible {
+    outline: unset !important;
+    outline-offset: unset !important;
+    transition: unset !important;
+  }
+  &.leftZero {
+    padding-left: 0 !important;
+    &:hover {
+      padding-left: 1rem !important;
+      &.antBtnLg {
+        padding-left: 1.25rem !important;
+      }
+      &.antBtnMd {
+        padding-left: 0.75rem !important;
+
+        @include responsiveToUp(md) {
+          padding-left: 0.5rem !important;
+        }
+      }
+      &.antBtnSm {
+        padding-left: 1rem !important;
+      }
+      &.antBtnXs {
+        padding-left: 0.75rem !important;
+      }
+    }
+  }
+  &.btnLeftFree {
+    @include responsiveToUp(md) {
+      padding-left: 0 !important;
+      &:hover {
+        padding-left: 0.5rem !important;
+        &.antBtnLg {
+          padding-left: 1.25rem !important;
+        }
+        &.antBtnMd {
+          padding-left: 0.5rem !important;
+        }
+        &.antBtnSm {
+          padding-left: 1rem !important;
+        }
+        &.antBtnXs {
+          padding-left: 0.75rem !important;
+        }
+      }
+    }
+  }
+}
+
+.customRadius {
+  border-radius: 4px !important;
+}
+
+// favourite button
+.favouriteBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem !important;
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  svg {
+    color: transparent;
+  }
+  &.selected {
+    svg {
+      color: $red !important;
+    }
+  }
+}
+.uploadBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem !important;
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  svg {
+    display: flex;
+  }
+}
+
+.signup {
+  width: 100% !important;
+  gap: 15px;
+  border-radius: 10px !important;
+  padding: 1rem !important;
+  &.google {
+    background: $white !important;
+    color: $black !important;
+    box-shadow: 0px 1px 8px 2px rgb(0 0 0 / 8%) !important;
+  }
+  &.apple {
+    background: black !important;
+    color: $white !important;
+  }
+  span {
+    font-size: #{$font20}rem !important;
+    font-weight: 500 !important;
+  }
+}
+
+.modifierButton {
+  padding: 0.5rem 0 !important;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  span {
+    color: $gray2 !important;
+  }
+  &:hover {
+    background-color: $gray1;
+    padding: 0.5rem 1rem !important;
+    span {
+      color: $primaryColor !important;
+    }
+  }
+}

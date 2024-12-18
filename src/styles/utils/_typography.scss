@@ -1,0 +1,53 @@
+// headers
+
+h1 {
+    color: $primaryColor;
+  font-size: #{$font56}rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 25px !important;
+}
+
+h2 {
+    color: $primaryColor;
+    font-size: #{$font48}rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+}
+
+h4{
+    font-size: #{$font24}rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+    background: -webkit-linear-gradient(#373FFF, #3ACAF8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h5{
+    color: $white1 !important;
+    font-size: #{$font18}rem !important;
+    font-weight: 600;
+    margin-bottom: 1rem !important;
+}
+
+h6{
+    color: $primaryColor;
+    font-size: #{$font24}rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+}
+
+.para-large {
+    color: $primaryColor;
+  font-size: #{$font18}rem !important;
+}
+
+.para-small {
+    color: $primaryColor;
+  font-size: #{$font16}rem !important;
+}
+
+.para-xs{
+    color: $white1;
+    font-size: #{$font14}rem !important;
+}

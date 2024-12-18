@@ -1,0 +1,120 @@
+.promoSliderWrapper {
+  .swiper {
+    overflow: hidden !important;
+  }
+}
+.promoCardWrapper {
+  height: 100%;
+  width: 100%;
+  .promoCard {
+    height: inherit;
+    // display: grid;
+    // grid-template-columns: 0.3fr 1fr;
+
+    .imageWrapper {
+    }
+    .promoDescriptionWrapper {
+      display: flex;
+      height: inherit;
+      .promoDescription {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        .promoDescriptionTopWrapper {
+          padding: 3rem 2rem;
+          display: flex;
+          flex-direction: column;
+          background-color: $gray2;
+          @include responsiveToUp(xxl) {
+            padding: 2rem;
+          }
+          @include responsiveToUp(md) {
+            padding: 1rem;
+          }
+          .text6Xlarge {
+            font-size: 5rem !important;
+            line-height: 1 !important;
+            @include responsiveToUp(xl) {
+              font-size: #{$font48}rem !important;
+            }
+            @include responsiveToUp(lg) {
+              font-size: #{$font48}rem !important;
+              text-transform: capitalize;
+              font-weight: 400 !important;
+            }
+            @include responsiveToUp(md) {
+              font-size: #{$font28}rem !important;
+              text-transform: capitalize;
+              font-weight: 400 !important;
+            }
+          }
+          .text3Xlarge {
+            @include responsiveToUp(xl) {
+              font-size: #{$font24}rem !important;
+            }
+            @include responsiveToUp(md) {
+              font-size: #{$font22}rem !important;
+              text-transform: capitalize;
+              font-weight: 400 !important;
+            }
+          }
+        }
+        .promoDescriptionBottomWrapper {
+          display: flex;
+          align-items: flex-end;
+          //   height: 100%;
+          background-color: $yellow;
+          padding: 3rem 1.5rem 1.5rem 2rem;
+          min-width: 100%;
+          min-width: -webkit-fill-available;
+          min-width: -webkit-fill-available;
+          min-width: stretch;
+          min-width: -moz-available;
+          @include responsiveToUp(md) {
+            padding: 1rem;
+          }
+          .promoDescriptionBottom {
+            // margin-top: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            @include responsiveToUp(md) {
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              gap: 0.5rem;
+            }
+            .textXlarge {
+              @include responsiveToUp(xl) {
+                font-size: #{$font20}rem !important;
+              }
+              @include responsiveToUp(md) {
+                font-size: #{$font12}rem !important;
+              }
+            }
+          }
+        }
+
+        .row {
+          flex: 1;
+          display: grid;
+          grid-template-columns: 0.3fr 1fr;
+          @include responsiveToUp(xl) {
+            grid-template-columns: 0.5fr 1fr;
+          }
+          @include responsiveToUp(md) {
+            grid-template-columns: 0.8fr 1fr;
+          }
+          .imageWrapper {
+            min-height: 15rem;
+            @include responsiveToUp(md) {
+              min-height: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

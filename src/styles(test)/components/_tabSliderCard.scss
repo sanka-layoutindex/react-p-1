@@ -1,0 +1,35 @@
+.tabSliderCardWrapper {
+  .tabSliderCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    .imageWrapper {
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .imageGridDescriptionWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      .titleWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        .textXlarge {
+          @include responsiveToUp(lg) {
+            font-size: #{$font16}rem !important;
+          }
+        }
+        .textXsmall {
+        }
+      }
+
+      .tagSm {
+        font-size: #{$font12}rem !important;
+        padding: 4px !important;
+      }
+      .textMedium {
+      }
+    }
+  }
+}

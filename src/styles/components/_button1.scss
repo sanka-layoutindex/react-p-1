@@ -1,0 +1,21 @@
+.nav-button{
+
+    a{
+        background: $primaryColor !important;
+        border-radius: 15px;
+        color: white;
+        font-size: #{$font16}rem !important;
+        font-weight: 700;
+        padding: 16px 40px !important;
+        display: inline-block;
+        border: 1px solid black;
+
+        &:hover{
+            background-color: white !important;
+            color: $primaryColor;
+            transition: 0.5s ease-in-out;
+            border: 1px solid black;
+        }
+    }
+  
+}

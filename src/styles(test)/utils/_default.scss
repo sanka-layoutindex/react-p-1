@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Futura_2";
+  src: url("/assets/fonts/FuturaPTCond-Medium.woff2") format("woff2"),
+    url("/assets/fonts/FuturaPTCond-Medium.woff") format("woff");
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// * {
+//   transition: all 0.1s ease-in-out;
+// }
+html body {
+  overflow-y: unset !important;
+  width: unset !important;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  margin: 0;
+  @include fontJost;
+  font-size: #{$baseFontSize}px;
+  // font-size: clamp(14px, 2vw, 20px);
+  // height: auto;
+  // min-height: 100%;
+  scroll-behavior: smooth;
+  color: $black1;
+  @include responsiveToUp(xxl) {
+    font-size: 15px;
+  }
+}
+
+html:has(.popup_true),
+html:has(.ant-drawer-open) {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+:where(.css-dev-only-do-not-override-ccdg5a).ant-btn,
+:where(.css-dev-only-do-not-override-ccdg5a).ant-typography,
+:where(.css-1x0dypw).ant-typography,
+:where(.css-1x0dypw).ant-breadcrumb,
+:where(.css-dev-only-do-not-override-1wwf28x).ant-typography,
+:where(.css-dev-only-do-not-override-1wwf28x).ant-tooltip {
+  font-family: "Jost", sans-serif !important;
+  line-height: normal !important;
+}
+
+// font family
+.fontJost {
+  @include fontJost;
+}
+.fontFutura {
+  @include fontFutura;
+  letter-spacing: -0.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+a,
+a:active,
+a:hover,
+a:focus {
+  cursor: pointer;
+  color: $black;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.h100 {
+  height: 100%;
+}
+
+.hMin100 {
+  min-height: 100%;
+}
+
+.hMax100 {
+  max-height: 100%;
+}
+
+.borderBottom {
+  border-bottom: 1px solid $gray4;
+}
+.section {
+  background-color: $white;
+}
+.sectionBlue {
+  background-color: $primaryColor;
+}
+.sectionBgGray1 {
+  background-color: $gray1;
+}
+.sectionBgGray2 {
+  background-color: $gray2;
+}
+.PageTopWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -10rem;
+  @include responsiveToUp(lg) {
+    margin-bottom: -15rem;
+  }
+  @include responsiveToUp(md) {
+    margin-bottom: -18rem;
+  }
+}
+.swiper {
+  height: 100%;
+  @include responsiveToUp(md) {
+    overflow: unset !important;
+  }
+}
+.swiper-slide {
+  height: auto !important;
+  flex-grow: 1;
+}
+
+.dividerWrapper {
+  .ant-divider:has(.ant-divider-with-text) {
+    margin: 0 !important;
+    &::after {
+      border-block-start: 1px solid $gray4 !important;
+    }
+    .ant-divider-inner-text {
+      padding-right: 3rem !important;
+    }
+  }
+}
+
+.ant-divider:has(.ant-divider-with-text) {
+  border-block-start: 1px solid $gray4 !important;
+}
+
+.ant-divider-horizontal.ant-divider-with-text {
+  margin: 0 !important;
+  .ant-divider-inner-text {
+    padding-right: 3rem !important;
+    @include responsiveToUp(md) {
+      padding-right: 1.75rem !important;
+    }
+  }
+}
+
+.hideScrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+}
+strong {
+  font-weight: bold !important;
+}
+
+.mainMenuLeft {
+  .antBtnSecondary {
+    span {
+      @include responsiveToUp(md) {
+        display: none;
+      }
+    }
+  }
+}
+
+.mainMenuRight.mobile {
+  .contactDetails {
+    @include responsiveToUp(md) {
+      display: none !important;
+    }
+  }
+}
+
+.scrollMargin {
+  scroll-margin-top: 5rem;
+}
+
+.showMoreText {
+  span {
+    font-size: #{$font20}rem !important;
+    font-weight: 300 !important;
+    color: $gray6 !important;
+  }
+  .show-more-less-clickable {
+    color: $primaryColor !important;
+    text-decoration: underline !important;
+    font-weight: 400 !important;
+  }
+}
+
+
+
+
+
+

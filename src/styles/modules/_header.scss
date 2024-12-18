@@ -1,0 +1,20 @@
+.header {
+  padding: 20px 0 0 0;
+
+  .navbar-nav {
+    justify-content: flex-end;
+    gap: 20px;
+    width: 80%;
+
+    .nav-link{
+        color: $primaryColor;
+        font-size: #{$font16}rem !important;
+        font-weight: 400;
+
+        &:hover{
+            color: $blue1 !important;
+            transition: 0.5s ease-in-out;
+        }
+    }
+  }
+}

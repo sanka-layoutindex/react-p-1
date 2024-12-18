@@ -1,0 +1,171 @@
+.accordionWrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.25rem;
+  .accordionTitleWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    .iconWrapper {
+      display: flex;
+      height: 2rem;
+      width: auto;
+    }
+  }
+  .accordionSection {
+    .ant-radio-group {
+      width: 100%;
+    }
+    .collapseWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      .panelWrapper {
+        border-radius: 4px !important;
+        overflow: hidden;
+        border: 1px solid $black1 !important;
+        .ant-collapse-header {
+          padding: 0 !important;
+        }
+        .ant-collapse-expand-icon {
+          display: none;
+        }
+        .accordionHeaderWrapper {
+          cursor: pointer;
+          background-color: $white;
+          padding: 0.75rem 1rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1.5rem;
+          &:has(input:checked) {
+            .accordionHeaderLeft {
+              .optionCircle {
+                background-color: $primaryColor;
+              }
+            }
+          }
+          .radio {
+            display: none;
+          }
+          .accordionHeaderLeft {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            flex: auto;
+
+            .optionCircle {
+              width: 1.25rem;
+              height: 1.25rem;
+              min-width: 1.25rem;
+              min-height: 1.25rem;
+              border: 1px solid $gray7;
+              border-radius: 100%;
+              transition: all 0.3s ease-in-out;
+            }
+            .middleWrapper {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              gap: 1rem;
+              flex: auto;
+              @include responsiveToUp(xl) {
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+              }
+              .optionLabel {
+                font-size: #{$font28}rem;
+                font-weight: 300;
+                line-height: 1 !important;
+                @include responsiveToUp(xxl) {
+                  font-size: #{$font24}rem;
+                }
+              }
+              .iconWrapper {
+                height: 2rem;
+                width: auto;
+                margin-left: auto;
+                @include responsiveToUp(xl) {
+                  margin-left: unset;
+                }
+
+                svg {
+                  height: 100%;
+                }
+              }
+            }
+          }
+          .accordionHeaderRight {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            justify-content: flex-end;
+
+            .price {
+              font-size: #{$font16}rem;
+              color: $red3;
+              text-decoration: line-through;
+            }
+            .discountedPrice {
+              font-size: #{$font48}rem;
+              color: $primaryColor;
+              font-weight: 500;
+              line-height: 1 !important;
+              white-space: nowrap;
+              @include responsiveToUp(xxl) {
+                font-size: #{$font38}rem;
+              }
+            }
+          }
+        }
+        .ant-collapse-content {
+          border: unset !important;
+        }
+      }
+    }
+  }
+}
+
+// disabled
+.accordionSection {
+  .disabled {
+    pointer-events: none;
+    .collapseWrapper {
+      .panelWrapper {
+        border: 1px solid $gray5 !important;
+        .accordionHeaderWrapper {
+          cursor: pointer;
+          background-color: $gray1;
+          .accordionHeaderLeft {
+            .optionCircle {
+              border: 1px solid $gray5;
+              background-color: $gray5;
+            }
+            .optionLabel {
+              color: $gray5 !important;
+            }
+          }
+          .accordionHeaderRight {
+            .iconWrapper {
+              opacity: 0.2;
+            }
+            .price {
+              color: $gray5;
+            }
+            .discountedPrice {
+              color: $gray5;
+            }
+          }
+        }
+      }
+    }
+  }
+}

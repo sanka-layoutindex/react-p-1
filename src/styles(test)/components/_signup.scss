@@ -1,0 +1,54 @@
+.signupWrapper {
+  .titleWrapper {
+    margin-bottom: 0.75rem;
+  }
+  .actionButtonWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .formWrapper {
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      .formInputWrapper {
+        .textNormal {
+        }
+        .formItem {
+        }
+      }
+      .linkWrapper {
+        a {
+          text-decoration: underline;
+        }
+        .textMedium {
+        }
+      }
+      .formActionWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+  }
+  .formBottomWrapper {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    a {
+        transition: all 0.3s ease-in-out;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .textMedium {
+    }
+    .textNormal {
+    }
+  }
+}

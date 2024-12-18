@@ -1,0 +1,178 @@
+// space
+
+.paddingGlobal {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  width: -webkit-fill-available;
+  width: -webkit-fill-available;
+  width: stretch;
+  width: -moz-available;
+  overflow: hidden;
+  @include responsiveToUp(lg) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include responsiveToUp(md) {
+    // padding-left: 0.5rem;
+    // padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  &.overFlow {
+    overflow: initial;
+  }
+  &.paddingGlobalZero {
+    @include responsiveToUp(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.mobileSlider {
+  // padding-left: 2rem;
+  // padding-right: 2rem;
+  // margin-left: -2rem;
+  // margin-right: -2rem;
+  @include responsiveToUp(lg) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  @include responsiveToUp(md) {
+    // padding-left: 0.5rem;
+    // padding-right: 0.5rem;
+    // margin-left: -0.5rem;
+    // margin-right: -0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+.mobileSwiperSlider {
+  .swiper-wrapper {
+    @include responsiveToUp(lg) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+    @include responsiveToUp(md) {
+      // padding-left: 0.5rem;
+      // padding-right: 0.5rem;
+      // margin-left: -0.5rem;
+      // margin-right: -0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 85rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include responsiveToUp(xxxl) {
+    max-width: 85rem;
+  }
+  @include responsiveToUp(xxl) {
+    max-width: 80rem;
+  }
+  @include responsiveToUp(xl) {
+    max-width: 80rem;
+  }
+  @include responsiveToUp(lg) {
+    max-width: 70rem;
+  }
+}
+.containerLarge {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include responsiveToUp(xxxl) {
+    max-width: 80rem;
+  }
+  @include responsiveToUp(xxl) {
+    max-width: 75rem;
+  }
+  @include responsiveToUp(xl) {
+    max-width: 75rem;
+  }
+  @include responsiveToUp(lg) {
+    max-width: 65rem;
+  }
+}
+.containerMedium {
+  width: 100%;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.containerSmall {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionLg {
+  padding: #{$space112}rem 0;
+  @include responsiveToUp(lg) {
+    padding: #{$space56}rem 0;
+  }
+}
+.sectionMd {
+  padding: #{$space56}rem 0;
+  @include responsiveToUp(lg) {
+    padding: #{$space28}rem 0;
+  }
+  @include responsiveToUp(md) {
+    padding: #{$space22}rem 0;
+  }
+}
+.sectionSm {
+  padding: #{$space28}rem 0;
+}
+.sectionXs {
+  padding: #{$space12}rem 0;
+}
+
+// section bottom
+.sectionLg_bottom {
+  padding: 0 0 #{$space112}rem 0;
+  @include responsiveToUp(lg) {
+    padding: 0 0 #{$space56}rem 0;
+  }
+}
+.sectionMd_bottom {
+  padding: 0 0 #{$space56}rem 0;
+  @include responsiveToUp(lg) {
+    padding: 0 0 #{$space28}rem 0;
+  }
+  @include responsiveToUp(md) {
+    padding: 0 0 #{$space20}rem 0;
+  }
+}
+.sectionMd_top {
+  padding: #{$space56}rem 0 0 0;
+  @include responsiveToUp(lg) {
+    padding: #{$space28}rem 0 0 0;
+  }
+  @include responsiveToUp(md) {
+    padding: #{$space20}rem 0 0 0;
+  }
+}
+
+.sectionMd {
+  &.sectionBgGray2 {
+    padding: #{$space28}rem 0;
+  }
+}

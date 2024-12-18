@@ -1,0 +1,67 @@
+.filterLabel {
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  background-color: $white;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid $gray3;
+
+  &.iconLeft{
+    justify-content: flex-start;
+  }
+
+  .iconWrapper {
+    display: none;
+    opacity: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  &.disabled {
+    background-color: unset !important;
+    pointer-events: none !important;
+    .formLabelName {
+      color: $gray7;
+
+      &:hover {
+        background-color: unset !important;
+      }
+    }
+  }
+  &:hover {
+    background-color: $gray1;
+  }
+  &:has(input:checked) {
+    background-color: $gray1;
+    border: 1px solid $primaryColor;
+    .formLabelName {
+    }
+    .iconWrapper {
+      opacity: 1;
+      display: flex;
+    }
+  }
+
+  .selectIcon {
+    object-fit: contain;
+    width: 1.25rem;
+    height: 1.25rem;
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+  }
+
+  .formInput {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+  }
+  .formLabelName {
+    color: $gray7;
+    line-height: 1.1 !important;
+  }
+}

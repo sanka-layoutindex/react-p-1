@@ -1,0 +1,66 @@
+.cardWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  height: 100%;
+}
+
+.conferenceGridCardWrapper {
+  height: 100%;
+  .conferenceGridCard {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: 0rem;
+    border-radius: 4px;
+    height: 100%;
+    @include responsiveToUp(md) {
+      display: flex;
+      flex-direction: column;
+    }
+    .imageWrapper {
+      overflow: hidden;
+      @include responsiveToUp(md) {
+        display: flex;
+        height: min-content;
+      }
+      .ratioImageWrapper {
+        @include responsiveToUp(md) {
+          position: relative;
+          padding-top: 120%;
+          height: auto;
+        }
+        img {
+          @include responsiveToUp(md) {
+            position: absolute !important;
+            height: 100%;
+            width: 100%;
+            inset: 0 !important;
+          }
+        }
+      }
+    }
+    .imageGridDescriptionWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 2rem;
+      background-color: $blue3;
+      @include responsiveToUp(md) {
+        padding: 0.75rem 1rem;
+        display: flex;
+        flex: 1;
+      }
+      .textXlarge {
+        @include responsiveToUp(lg) {
+          font-size: #{$font16}rem !important;
+        }
+      }
+      .textXsmall {
+        line-height: normal !important;
+      }
+      .textNormal {
+        line-height: normal !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,231 @@
+.heroSliderWrapper {
+  position: relative;
+  .swiper {
+    overflow: hidden !important;
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 100%;
+        height: 40rem !important;
+        width: 100vw;
+        @include responsiveToUp(xxxl) {
+          // height: 65vh !important;
+        }
+        @include responsiveToUp(xl) {
+          // height: 60vh !important;
+          height: 38rem !important;
+        }
+        @include responsiveToUp(lg) {
+          // height: 58vh !important;
+          height: 42rem !important;
+        }
+        @include responsiveToUp(md) {
+          height: 84vh !important;
+        }
+        @include responsiveToUp(sm) {
+          height: 72vh !important;
+        }
+        .bannerImageWrapper {
+          height: inherit;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .bannerContentWrapper {
+          position: relative;
+          height: inherit;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .bannerVideo {
+            height: inherit;
+            width: 100%;
+            object-fit: cover;
+          }
+          .bannerContent {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10rem 0rem;
+            background-image: radial-gradient(
+              rgba(50, 50, 50, 0) 0%,
+              rgba(0, 0, 0, 0.4)
+            );
+
+            @include responsiveToUp(xxl) {
+              padding: 10rem 0rem;
+            }
+            @include responsiveToUp(xl) {
+              padding: 10rem 0rem;
+            }
+            @include responsiveToUp(md) {
+              padding: 10rem 0rem;
+            }
+            .bannerContentRow {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10rem;
+              @include responsiveToUp(xl) {
+                grid-template-columns: 0.5fr 0.5fr;
+                gap: 2rem;
+              }
+              @include responsiveToUp(md) {
+                gap: 1rem;
+                display: flex;
+                flex-direction: column-reverse;
+              }
+
+              .bannerContentCol {
+                .bannerDescription {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.5rem;
+                  @include responsiveToUp(md) {
+                    gap: 0.5rem;
+                  }
+
+                  .descriptionWrap {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+                    color: $gray2 !important;
+                    .text3Xlarge {
+                      @include responsiveToUp(xl) {
+                        font-size: #{$font28}rem !important;
+                      }
+                    }
+                    .textMedium {
+                      @include responsiveToUp(xl) {
+                        font-size: #{$font16}rem !important;
+                        font-weight: 300 !important;
+                      }
+                    }
+                  }
+                  .antBtnMd {
+                    @include responsiveToUp(xl) {
+                      font-size: #{$font20}rem !important;
+                      font-weight: 400 !important;
+                    }
+                    @include responsiveToUp(md) {
+                      font-size: #{$font16}rem !important;
+                      font-weight: 400 !important;
+                      padding-top: 0.75rem !important;
+                      padding-bottom: 0.75rem !important;
+                    }
+                  }
+                }
+                .bannerSubImagesWrap {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  grid-template-columns: 1fr;
+                  gap: 1.75rem;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    max-height: 20rem;
+                    object-fit: cover;
+                  }
+                }
+              }
+            }
+            .bannerContentCol {
+              &.center {
+                .bannerSubImagesWrap {
+                  height: 15rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  .imageWrap {
+                    width: 30vw;
+                    margin: auto;
+                    @include responsiveToUp(xl) {
+                      width: 50vw;
+                    }
+                    @include responsiveToUp(md) {
+                      width: 18rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .swiperPaginationWrapper {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 999;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 3rem;
+    transition: all 0.2s ease-in-out;
+    @include responsiveToUp(xxl) {
+      bottom: 1rem;
+    }
+    @include responsiveToUp(xl) {
+      bottom: 1rem;
+    }
+    @include responsiveToUp(md) {
+      display: none;
+    }
+    &:hover {
+      .swiperButton {
+        display: flex;
+      }
+    }
+    .swiperPagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      .swiper-pagination-bullet {
+        width: 0.75rem;
+        height: 0.75rem;
+        min-width: 0.75rem;
+        min-height: 0.75rem;
+        background-color: transparent;
+        border-radius: 100%;
+        border: 1px solid $white;
+        opacity: 1 !important;
+        &.swiper-pagination-bullet-active {
+          background-color: $white;
+        }
+      }
+    }
+    .swiperButton {
+      width: 1.5rem;
+      height: 1.5rem;
+      min-width: 1.5rem;
+      min-height: 1.5rem;
+      background-color: $white;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+      cursor: pointer;
+      &.swiperButtonPrev {
+        transform: rotate(180deg);
+      }
+      &.swiperButtonNext {
+      }
+    }
+  }
+}

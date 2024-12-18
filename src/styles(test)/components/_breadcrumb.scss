@@ -1,0 +1,25 @@
+.breadcrumbWrapper {
+  padding: 0.5rem 0;
+  &.center {
+    display: flex;
+    justify-content: center;
+  }
+  .ant-breadcrumb {
+    overflow: auto;
+    ol {
+      @include responsiveToUp(md) {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        white-space: nowrap;
+        flex-wrap: nowrap;
+      }
+      li {
+        font-size: 1rem;
+        color: $gray6;
+        font-weight: 300;
+      }
+    }
+  }
+}

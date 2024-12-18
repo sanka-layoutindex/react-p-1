@@ -1,0 +1,72 @@
+.popupWrapper {
+  .locationDetailsWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    .imageWrapper {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .detailsWrapper {
+      // .title {
+      //   .textMedium {
+      //   }
+      // }
+      .desc {
+        .iconContentWrapper {
+          @include flexCenterGap(1.5rem);
+          justify-content: space-between;
+          flex-wrap: wrap;
+          row-gap: 0.5rem;
+          .iconItemWrapper {
+            @include flexCenterGap(0.5rem);
+            align-items: center;
+            .icon {
+              display: flex;
+              width: 1rem;
+              height: 1rem;
+              color: $gray6;
+            }
+            .textNormal {
+              @include responsiveToUp(md) {
+                font-size: #{$font16}rem !important;
+              }
+              span {
+                display: flex;
+                align-items: center;
+              }
+            }
+            .textFlex {
+              display: flex;
+              gap: 0.5rem;
+              text-wrap: nowrap;
+              white-space: nowrap;
+            }
+            .arrowIcon {
+              width: 1.5rem;
+              height: 1.5rem;
+              display: flex;
+              svg {
+                display: flex;
+                margin: unset;
+                width: auto;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .popupDivider {
+    margin: 0.75rem 0 !important;
+  }
+  .contentShareWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

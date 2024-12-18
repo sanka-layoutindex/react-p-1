@@ -1,0 +1,92 @@
+.countdownCardWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primaryColor;
+  gap: 3rem;
+  padding: 5rem;
+  min-height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include responsiveToUp(lg) {
+    gap: 2rem;
+    padding: 3rem;
+  }
+  @include responsiveToUp(md) {
+    padding-top: 4rem !important;
+    gap: 1.75rem;
+    padding: 0.5rem;
+  }
+
+  .imageWrapper {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .contDown {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    @include responsiveToUp(md) {
+      gap: 2rem;
+    }
+    @include responsiveToUp(sm) {
+      gap: 1rem;
+    }
+    .countdownItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2rem;
+      .num {
+        font-size: #{$font72}rem;
+        font-weight: 500;
+        line-height: normal !important;
+        color: $blue6;
+
+        @include responsiveToUp(md) {
+          font-size: #{$font48}rem;
+        }
+        @include responsiveToUp(sm) {
+          font-size: #{$font40}rem;
+        }
+      }
+      .text {
+        font-size: #{$font28}rem;
+        font-weight: 300;
+        line-height: normal !important;
+        color: $blue6;
+        @include responsiveToUp(md) {
+          font-size: #{$font16}rem;
+        }
+      }
+    }
+  }
+  .textWrapper {
+    text-align: center;
+    .text2Xlarge {
+      text-align: center !important;
+      @include responsiveToUp(lg) {
+        font-weight: 300 !important;
+      }
+      @include responsiveToUp(md) {
+        font-weight: 300 !important;
+        font-size: #{$font28}rem !important;
+      }
+    }
+  }
+  .actionWrapper {
+  }
+}

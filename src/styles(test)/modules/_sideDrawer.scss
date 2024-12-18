@@ -1,0 +1,85 @@
+.ant-drawer-content-wrapper:has(.drawerMedium) {
+  width: 60rem !important;
+  @include responsiveToUp(md) {
+    width: 100vw !important;
+  }
+}
+.sideDrawer {
+  .ant-drawer-body {
+    padding: 0.75rem 3.5rem !important;
+    @include responsiveToUp(md) {
+      padding: 0.75rem !important;
+    }
+    .drawerCloseWrapper {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0.75rem;
+    }
+    .drawerBodyWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      .drawerHeaderWrapper {
+        .text2Xlarge {
+          line-height: 1 !important;
+        }
+        .textMedium {
+        }
+      }
+      .excursionIconListDrawerWrapper {
+        display: flex;
+        flex-direction: row;
+
+        width: 100%;
+        @include responsiveToUp(md) {
+          overflow: auto;
+        }
+      }
+      .excursionIconListItemsWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+
+        width: 100%;
+        @include responsiveToUp(md) {
+          gap: 2rem;
+          width: 100%;
+          min-width: max-content;
+        }
+        .excursionIconList {
+          display: flex;
+          flex-direction: row;
+          gap: 0.5rem;
+          align-items: center;
+          .iconWrapper {
+            display: flex;
+            .icon {
+              width: 2rem;
+              height: 2rem;
+              object-fit: contain;
+            }
+          }
+          .textWrapper {
+            display: flex;
+            flex-direction: column;
+
+            .textXsmall {
+              line-height: 1 !important;
+            }
+            .textNormal {
+              line-height: 1.1 !important;
+            }
+          }
+        }
+      }
+      .imageWrapper {
+        .ratioImageWrapper {
+        }
+      }
+      .drawerDetailsWrapper {
+      }
+    }
+  }
+}

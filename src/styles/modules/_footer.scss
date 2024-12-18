@@ -1,0 +1,86 @@
+.footer {
+  background-color: $primaryColor;
+  padding: 40px 15px;
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .logo {
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+  .navbar2 {
+    padding-left: 0;
+
+    a {
+      color: $white1;
+      font-size: #{$font16}rem !important;
+
+      &:hover {
+        color: #3acaf8;
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    li {
+      margin-bottom: 7px !important;
+    }
+  }
+
+  input[type="text" i] {
+    background-color: #2b2e3c;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  input[type="submit" i] {
+    background-color: white;
+    padding: 10px 25px;
+    border-radius: 15px;
+    color: $primaryColor;
+    margin-left: -10px;
+  }
+
+  form {
+    display: flex;
+  }
+
+  .copyright {
+    position: relative;
+    padding-top: 25px;
+    opacity: 0.8;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 15px;
+      right: 0;
+      background-color: white;
+      height: 1px;
+      width: 35%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      background-color: white;
+      height: 1px;
+      width: 35%;
+    }
+
+    .social {
+      display: flex;
+      gap: 15px;
+    }
+  }
+}

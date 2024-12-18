@@ -1,0 +1,150 @@
+.ant-modal-root {
+  &:has(.searchpoPupModal) {
+    @include responsiveTo(md) {
+      display: none !important;
+    }
+  }
+}
+.ant-modal-root {
+  &:has(.filterPopupModal) {
+    @include responsiveTo(lg) {
+      display: none !important;
+    }
+  }
+}
+
+.fullWidthPupModal {
+  max-width: 100vw !important;
+  width: 100% !important;
+  margin: 0 !important;
+  .ant-modal-content {
+    padding: 0.5rem !important;
+    height: calc(100vh);
+    border-radius: 0 !important;
+    .ant-modal-close {
+      background-color: transparent !important;
+      border: unset !important;
+      color: $black;
+    }
+    .ant-modal-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      height: 100%;
+      .modalBodyWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        height: 100%;
+
+        max-width: 40rem;
+        margin: auto;
+        width: 100%;
+      }
+      .searchActionWrapper {
+        margin-top: auto;
+        border-top: 1px solid $gray4;
+        padding-top: 0.45rem;
+      }
+    }
+  }
+}
+
+.fullWidthPupModal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border: unset !important;
+  background-color: transparent !important;
+  .ant-collapse-item {
+    border: unset !important;
+    margin-bottom: 0.3rem;
+    &.ant-collapse-item-active {
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray4 !important;
+      }
+
+      .ant-collapse-header {
+        background-color: $blue3;
+        border: 2px solid $primaryColor;
+      }
+    }
+    .ant-collapse-header {
+      border: 1px solid $primaryColor;
+      border-radius: 4px !important;
+      .ant-collapse-expand-icon {
+        display: none !important;
+      }
+      .ant-collapse-header-text {
+        width: 100%;
+        border-radius: 4px;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        // border: 3px solid $gray1;
+
+        @include responsiveToUp(xl) {
+          padding: 0.875rem 0.75rem;
+        }
+        cursor: pointer;
+
+        &.active {
+          background-color: $blue3;
+          // border: 3px solid $primaryColor;
+        }
+        .textWrapper {
+          display: flex;
+          flex-direction: column;
+          span {
+            line-height: 1.1 !important;
+            color: $gray6;
+          }
+          .textXsmall {
+          }
+          .textMedium {
+            @include responsiveToUp(xl) {
+              font-size: #{$font16}rem !important;
+            }
+          }
+        }
+        .closeWrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 1.25rem;
+          svg {
+            display: flex;
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .ant-collapse-content {
+      background-color: $gray2 !important;
+      border: unset !important;
+      .ant-collapse-content-box {
+        padding: 0.5rem 0 !important;
+        background-color: transparent !important;
+        &:has(.portBoxLabel) {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+        }
+        .megaMenuItemWrapper {
+          padding: 0;
+        }
+        .filterActionWrapper {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.ant-collapse {
+  background-color: unset !important;
+  border: unset !important;
+}

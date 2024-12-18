@@ -1,0 +1,342 @@
+.ImageDiscriptionCardWrapper {
+  scroll-margin-top: 5rem;
+  &.single {
+    .ImageDiscriptioCardGrid {
+      .DescriotionWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @include responsiveToUp(xl) {
+          gap: 1rem;
+        }
+      }
+      @include responsiveToUp(xl) {
+        grid-template-columns: 1fr;
+      }
+      .ImageDiscriptioImageWrapper {
+        @include responsiveToUp(xl) {
+          display: none;
+        }
+      }
+    }
+  }
+  &.stickyCard {
+    .ImageDiscriptioCardGrid {
+      .DescriotionWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .ImageDiscriptioStickyImageWrapper {
+        height: 75rem;
+        @include responsiveToUp(xxl) {
+          height: 50rem;
+        }
+        @include responsiveToUp(xl) {
+          height: 45rem;
+        }
+        @include responsiveToUp(md) {
+          height: unset;
+        }
+        .ImageDiscriptioImageWrapper {
+          position: -webkit-sticky;
+          position: sticky;
+          top: 5rem;
+          @include responsiveToUp(md) {
+            position: unset;
+          }
+        }
+      }
+    }
+  }
+  &.excursionListCard {
+    .cardBodyWrapper {
+      @include responsiveToUp(lg) {
+        display: none;
+      }
+    }
+    .DescriotionWrapper {
+      @include responsiveToUp(md) {
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .ImageDiscriptioCardGrid {
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+    gap: 8rem;
+    @include responsiveToUp(xxl) {
+      gap: 6rem;
+    }
+    @include responsiveToUp(xl) {
+      gap: 2rem;
+    }
+    @include responsiveToUp(md) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .DescriotionWrapper {
+      .cardHeaderWrapper {
+        scroll-margin-top: 5rem;
+        .textWrapper {
+          .textXlarge {
+            display: block;
+            margin-bottom: 0.75rem !important;
+            @include responsiveToUp(md) {
+              font-size: #{$font20}rem !important ;
+            }
+          }
+          span {
+            line-height: 1 !important;
+          }
+        }
+        .headTextWrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .textWrapper {
+            .text5Xlarge {
+              line-height: 1 !important;
+              @include responsiveToUp(md) {
+                font-size: #{$font48}rem !important ;
+              }
+            }
+          }
+          .flagWrappwer {
+            width: 2.5rem;
+            .flag {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+        .headerDivider {
+          border-block-start: 1px solid $gray3 !important;
+          margin: 0.25rem 0 !important;
+        }
+        .textTimeContentWrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .textTimeWrapper {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 1rem;
+          margin: 0.75rem 0;
+        }
+      }
+      .cardBodyWrapper {
+        .cardDescription {
+          color: $gray7 !important;
+          &.colOne {
+            column-count: 1;
+            column-gap: 2rem;
+            text-align: justify;
+          }
+          &.colTwo {
+            column-count: 2;
+            column-gap: 2rem;
+            text-align: justify;
+            @include responsiveToUp(md) {
+              column-count: 1;
+            }
+          }
+        }
+      }
+    }
+    .ImageDiscriptioImageWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      @include responsiveToUp(md) {
+        justify-content: center;
+        align-items: center;
+      }
+      .imageWrapper {
+        border-radius: 4px;
+        overflow: hidden;
+        @include responsiveToUp(md) {
+          width: 60vw;
+          min-width: 15rem;
+        }
+        .ratioImageWrapper {
+        }
+      }
+      .textWrapper {
+      }
+    }
+  }
+
+  &.centerd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 50rem;
+    @include responsiveToUp(md) {
+    }
+    .ImageDiscriptioCardGrid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+
+      .ImageDiscriptioImageWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 30rem;
+        margin: auto;
+        @include responsiveToUp(md) {
+          width: 100vw;
+        }
+        .imageWrapper {
+          border-radius: 4px;
+          overflow: hidden;
+          @include responsiveToUp(md) {
+            border-radius: 0;
+            width: 100%;
+            max-width: 100%;
+          }
+          .ratioImageWrapper {
+          }
+        }
+      }
+      .DescriotionWrapper {
+        .cardHeaderWrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          .textWrapper {
+            .textXlarge {
+              @include responsiveToUp(md) {
+                font-size: #{$font20}rem !important;
+              }
+            }
+            span {
+              line-height: 1 !important;
+            }
+          }
+          .headTextWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            .textWrapper {
+              .text5Xlarge {
+                line-height: 1 !important;
+                @include responsiveToUp(md) {
+                  font-size: #{$font48}rem !important;
+                }
+              }
+            }
+            .flagWrappwer {
+              width: 2.5rem;
+              .flag {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+          }
+          .headerDivider {
+            border-block-start: 1px solid $gray3 !important;
+            margin: 0.25rem 0 !important;
+            min-width: 50rem;
+            @include responsiveToUp(md) {
+              min-width: 100%;
+              width: 100vw;
+            }
+          }
+          .textTimeContentWrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+          }
+          .textTimeWrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+            margin: 0;
+          }
+        }
+        .cardBodyWrapper {
+          .cardDescription {
+            color: $gray7 !important;
+            &.colOne {
+              column-count: 1;
+              column-gap: 2rem;
+              text-align: justify;
+            }
+            &.colTwo {
+              column-count: 2;
+              column-gap: 2rem;
+              text-align: justify;
+              @include responsiveToUp(md) {
+                column-count: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.paddingGlobal:has(.ImageDiscriptionCardWrapper.centerd) {
+  @include responsiveToUp(md) {
+    padding: 0;
+  }
+}
+
+.cardBodyWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  .imageDescriptionRow {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: 2rem;
+
+    .imageWrapper {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .cardDescription {
+      .textXlarge {
+      }
+    }
+  }
+  .imageDescriptionRow:nth-child(even) {
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+    gap: 2rem;
+
+    .imageWrapper {
+      order: 2;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .cardDescription {
+      order: 1;
+      .textXlarge {
+      }
+    }
+  }
+}

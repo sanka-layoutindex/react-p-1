@@ -1,0 +1,104 @@
+.tariffSection {
+  .headerCenterd {
+    @include responsiveToUp(md) {
+      text-align: left;
+    }
+  }
+}
+
+.tariffListWrapper {
+  .tariffListGrid {
+    .tariffList {
+      column-count: 2;
+      gap: #{$space56}rem;
+      @include responsiveToUp(xl) {
+        gap: 2rem;
+      }
+      @include responsiveToUp(md) {
+        column-count: 1;
+        gap: 0.75rem;
+      }
+      .tariffListItem {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: #{$space56}rem;
+        @include responsiveToUp(md) {
+          margin-bottom: 0.75rem;
+        }
+        .titleWrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          // .textXlarge {
+          // }
+          .iconWrapper {
+            width: 1rem;
+            height: 1rem;
+            min-width: 1rem;
+            min-height: 1rem;
+            display: none;
+            transition: all 0.2s ease-in-out;
+            @include responsiveToUp(md) {
+              display: flex;
+            }
+            &.active {
+              transform: rotate(180deg);
+            }
+            svg {
+              width: auto;
+              height: 100%;
+            }
+          }
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          animation: dropdown 0.4s ease-out;
+          overflow: hidden;
+          @include responsiveToUp(md) {
+            max-height: 0px;
+          }
+          &.active {
+            @include responsiveToUp(md) {
+              max-height: 100%;
+            }
+          }
+          li {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.75rem;
+            .iconWrapper {
+              display: flex;
+              width: 1rem;
+              height: 1rem;
+              min-width: 1rem;
+              min-height: 1rem;
+              svg {
+                width: auto;
+                height: 100%;
+              }
+            }
+            .textMedium {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tariffList > * {
+  break-inside: avoid;
+}
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

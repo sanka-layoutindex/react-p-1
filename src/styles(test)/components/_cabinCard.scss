@@ -1,0 +1,702 @@
+.tabCardWrapper {
+  &.cabinListWrapper {
+    grid-template-columns: 1fr !important;
+    @include responsiveToUp(xl) {
+      display: flex !important;
+      gap: 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    @include responsiveToUp(md) {
+      display: flex !important;
+      gap: 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+  }
+}
+.popupActionWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.cabinDescCardWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  height: 100%;
+  @include responsiveToUp(xl) {
+    min-width: 40%;
+    max-width: 44%;
+    grid-template-columns: 1fr;
+    gap: 1rem !important;
+  }
+  @include responsiveToUp(md) {
+    min-width: 83%;
+    max-width: unset;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .imageBlockWrapper {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    .ratioImageWrapper.freeSize {
+      @include responsiveToUp(xl) {
+        padding-top: 56.25%;
+      }
+      @include responsiveToUp(md) {
+        padding-top: 56.25%;
+      }
+      img {
+        @include responsiveToUp(xl) {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          inset: 0;
+          object-fit: cover;
+        }
+        @include responsiveToUp(md) {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          inset: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .imageSliderWrapper {
+    .swiper {
+      overflow: hidden !important;
+    }
+    .imageContentWrapper {
+      border-radius: 4px;
+      overflow: hidden;
+      &:hover {
+        .textWrapper {
+          opacity: 1;
+        }
+      }
+      .textWrapper {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        width: -webkit-fill-available;
+        width: stretch;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(0, 0, 0, 0.439) 80%
+        );
+        .textMedium {
+        }
+      }
+    }
+    .swiperPaginationWrapper {
+    }
+  }
+
+  .descBlockWrapper {
+    @include flexColumnGap(0.75rem);
+    flex-grow: 1;
+    @include responsiveToUp(xl) {
+      padding: 0 0.75rem;
+    }
+    @include responsiveToUp(md) {
+      padding: 0;
+    }
+    .titleWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      @include responsiveToUp(xl) {
+        order: 1;
+      }
+      @include responsiveToUp(md) {
+        order: 1;
+      }
+
+      .text2Xlarge {
+        @include responsiveToUp(xl) {
+          font-size: #{$font28}rem !important;
+        }
+        @include responsiveToUp(md) {
+          font-size: #{$font28}rem !important;
+        }
+      }
+      .tooltipWrapper {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    .cabinSizeWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      @include responsiveToUp(xl) {
+        order: 2;
+      }
+      @include responsiveToUp(md) {
+        order: 2;
+      }
+      .iconRow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .iconWrapper {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      .textWrapper {
+        .textXlarge {
+          @include responsiveToUp(xl) {
+            font-size: #{$font20}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font20}rem !important;
+          }
+        }
+      }
+    }
+    .iconContentWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      row-gap: 1rem;
+      @include responsiveToUp(xl) {
+        order: 6;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+      }
+      @include responsiveToUp(md) {
+        order: 6;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+      .iconItemWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        .iconWrapper {
+          width: 1.25rem;
+          height: 1.25rem;
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+        .textNormal {
+        }
+      }
+    }
+
+    .priceWrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px solid $gray4;
+      border-bottom: 1px solid $gray4;
+      padding: 0.5rem 0;
+      @include responsiveToUp(xl) {
+        border-top: unset;
+        border-bottom: unset;
+        order: 3;
+        padding: 0;
+      }
+      @include responsiveToUp(md) {
+        border-top: unset;
+        border-bottom: unset;
+        order: 3;
+        padding: 0;
+      }
+      .textWrapper {
+        .textMedium {
+          @include responsiveToUp(xl) {
+            font-size: #{$font16}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font16}rem !important;
+          }
+        }
+      }
+      .price {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        justify-content: flex-end;
+        align-items: center;
+        @include responsiveToUp(xl) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0rem;
+        }
+        @include responsiveToUp(xl) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0rem;
+        }
+        @include responsiveToUp(md) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0rem;
+        }
+        .showPriceText {
+          text-decoration: line-through;
+          font-size: #{$font20}rem !important;
+          font-weight: 300;
+          line-height: 1 !important;
+          text-wrap: nowrap;
+          white-space: nowrap;
+          @include responsiveToUp(xl) {
+            font-size: #{$font16}rem !important;
+            display: none;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font16}rem !important;
+            display: none;
+          }
+        }
+        .priceText {
+          font-size: #{$font28}rem !important;
+          font-weight: 300;
+          line-height: 1 !important;
+          text-wrap: nowrap;
+          white-space: nowrap;
+          @include responsiveToUp(xl) {
+            font-size: #{$font28}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font28}rem !important;
+          }
+        }
+        &.textLarge {
+          .showPriceText {
+            text-decoration: line-through;
+            font-size: #{$font26}rem !important;
+            font-weight: 300;
+            text-wrap: nowrap;
+            white-space: nowrap;
+            @include responsiveToUp(xl) {
+              font-size: #{$font16}rem !important;
+            }
+            @include responsiveToUp(md) {
+              font-size: #{$font16}rem !important;
+            }
+          }
+          .priceText {
+            font-size: #{$font38}rem !important;
+            font-weight: 300;
+            line-height: 1 !important;
+            text-wrap: nowrap;
+            white-space: nowrap;
+            @include responsiveToUp(xl) {
+              font-size: #{$font28}rem !important;
+            }
+            @include responsiveToUp(md) {
+              font-size: #{$font28}rem !important;
+            }
+          }
+        }
+      }
+    }
+    .cardBottomWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      @include responsiveToUp(xl) {
+        justify-content: center;
+        order: 5;
+        border-bottom: 1px solid $gray4;
+        padding-bottom: 0.75rem;
+      }
+      @include responsiveToUp(md) {
+        justify-content: center;
+        order: 5;
+        border-bottom: 1px solid $gray4;
+        padding-bottom: 0.75rem;
+      }
+      .tagWrapper {
+        @include responsiveToUp(xl) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        @include responsiveToUp(md) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .textNormal {
+      }
+    }
+    .cardActionWrapper {
+      margin-top: auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      @include responsiveToUp(xl) {
+        justify-content: center;
+        order: 4;
+      }
+      @include responsiveToUp(md) {
+        justify-content: center;
+        order: 4;
+      }
+      &.flexNormal {
+        margin-top: unset;
+        display: flex;
+        justify-content: flex-start;
+        @include responsiveToUp(xl) {
+          margin-top: auto;
+        }
+        @include responsiveToUp(md) {
+          margin-top: auto;
+        }
+      }
+      button {
+        @include responsiveToUp(xl) {
+          width: 100%;
+        }
+        @include responsiveToUp(md) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.cabinDescCardWrapper:has(.swiperPaginationWrapper:hover) {
+  .cabinImageCaption {
+    opacity: 1 !important;
+  }
+}
+
+// drawer cabin card
+.cabinDescCardWrapper.drawer {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  gap: 1rem;
+  height: 100%;
+  @include responsiveToUp(xl) {
+    min-width: 40%;
+    max-width: 44%;
+    grid-template-columns: 1fr;
+    gap: 1rem !important;
+  }
+  @include responsiveToUp(md) {
+    min-width: 83%;
+    max-width: unset;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .imageBlockWrapper {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    .ratioImageWrapper.freeSize {
+      @include responsiveToUp(xl) {
+        padding-top: 56.25%;
+      }
+      @include responsiveToUp(md) {
+        padding-top: 56.25%;
+      }
+      img {
+        @include responsiveToUp(xl) {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          inset: 0;
+          object-fit: cover;
+        }
+        @include responsiveToUp(md) {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          inset: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .imageSliderWrapper {
+    .swiper {
+      overflow: hidden !important;
+    }
+    .imageContentWrapper {
+      border-radius: 4px;
+      overflow: hidden;
+      &:hover {
+        .textWrapper {
+          opacity: 1;
+        }
+      }
+      .textWrapper {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        width: -webkit-fill-available;
+        width: stretch;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(0, 0, 0, 0.439) 80%
+        );
+        .textMedium {
+        }
+      }
+    }
+    .swiperPaginationWrapper {
+    }
+  }
+
+  .descBlockWrapper {
+    @include flexColumnGap(0.5rem);
+    flex-grow: 1;
+    @include responsiveToUp(xl) {
+      padding: 0 0.5rem;
+    }
+    @include responsiveToUp(md) {
+      padding: 0;
+    }
+    .titleWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      @include responsiveToUp(xl) {
+        order: 1;
+      }
+      @include responsiveToUp(md) {
+        order: 1;
+      }
+
+      .text2Xlarge {
+        line-height: 1 !important;
+        font-size: #{$font28}rem !important;
+        font-weight: 300 !important;
+        @include responsiveToUp(xl) {
+          font-size: #{$font20}rem !important;
+        }
+        @include responsiveToUp(md) {
+          font-size: #{$font20}rem !important;
+        }
+      }
+      .tooltipWrapper {
+        display: none;
+      }
+    }
+    .cabinSizeWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      @include responsiveToUp(xl) {
+        order: 2;
+      }
+      @include responsiveToUp(md) {
+        order: 2;
+      }
+      .iconRow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .iconWrapper {
+        width: 1rem;
+        height: 1rem;
+      }
+      .textWrapper {
+        .textXlarge {
+          font-size: #{$font16}rem !important;
+          font-weight: 300 !important;
+          @include responsiveToUp(xl) {
+            font-size: #{$font16}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font16}rem !important;
+          }
+        }
+      }
+    }
+    .iconContentWrapper {
+      display: none;
+    }
+
+    .priceWrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px solid $gray4;
+      border-bottom: 1px solid $gray4;
+      padding: 0.5rem 0;
+      @include responsiveToUp(xl) {
+        border-top: unset;
+        border-bottom: unset;
+        order: 3;
+        padding: 0;
+      }
+      @include responsiveToUp(md) {
+        border-top: unset;
+        border-bottom: unset;
+        order: 3;
+        padding: 0;
+      }
+      .textWrapper {
+        .textMedium {
+          font-size: #{$font16}rem !important;
+          font-weight: 400 !important;
+          @include responsiveToUp(xl) {
+            font-size: #{$font16}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font16}rem !important;
+          }
+        }
+      }
+      .price {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        justify-content: flex-end;
+        align-items: center;
+        @include responsiveToUp(xl) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0rem;
+        }
+        @include responsiveToUp(xl) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0rem;
+        }
+        @include responsiveToUp(md) {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 0rem;
+        }
+
+        .priceText {
+          font-size: #{$font20}rem !important;
+          font-weight: 300;
+          line-height: 1 !important;
+          text-wrap: nowrap;
+          white-space: nowrap;
+          @include responsiveToUp(xl) {
+            font-size: #{$font20}rem !important;
+          }
+          @include responsiveToUp(md) {
+            font-size: #{$font20}rem !important;
+          }
+        }
+        &.textLarge {
+          .priceText {
+            font-size: #{$font20}rem !important;
+            font-weight: 300;
+            line-height: 1 !important;
+            text-wrap: nowrap;
+            white-space: nowrap;
+            @include responsiveToUp(xl) {
+              font-size: #{$font20}rem !important;
+            }
+            @include responsiveToUp(md) {
+              font-size: #{$font20}rem !important;
+            }
+          }
+        }
+      }
+    }
+
+    .singleRowWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .cardBottomWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        @include responsiveToUp(xl) {
+          justify-content: center;
+          order: 5;
+          border-bottom: 1px solid $gray4;
+          padding-bottom: 0.75rem;
+        }
+        @include responsiveToUp(md) {
+          justify-content: center;
+          order: 5;
+          border-bottom: 1px solid $gray4;
+          padding-bottom: 0.75rem;
+        }
+        .textNormal {
+          font-size: #{$font16}rem !important;
+          font-weight: 400 !important;
+        }
+      }
+      .cardActionWrapper {
+        margin-top: auto;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        @include responsiveToUp(xl) {
+          justify-content: center;
+          order: 4;
+        }
+        @include responsiveToUp(md) {
+          justify-content: center;
+          order: 4;
+        }
+        &.flexNormal {
+          margin-top: unset;
+          display: flex;
+          justify-content: flex-start;
+          @include responsiveToUp(xl) {
+            margin-top: auto;
+          }
+          @include responsiveToUp(md) {
+            margin-top: auto;
+          }
+        }
+        button {
+          @include responsiveToUp(xl) {
+            width: 100%;
+          }
+          @include responsiveToUp(md) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

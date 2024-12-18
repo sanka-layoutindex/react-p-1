@@ -1,0 +1,100 @@
+.cruiseFilterWrapper {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: $gray2;
+  .cruiseFilter {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    @include responsiveToUp(md) {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    .filterListWrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      @include responsiveToUp(md) {
+        display: none;
+      }
+    }
+    .filterDropdownWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .dropdownWrapper {
+        display: flex;
+        @include responsiveToUp(md) {
+          display: none;
+        }
+      }
+      .mobileFilter {
+        display: none;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.2s ease-in-out;
+        padding: 0.5rem;
+        border-radius: 2px;
+        @include responsiveToUp(md) {
+          display: flex;
+        }
+        .iconWrapper {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+    }
+  }
+}
+.searchResultHeaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  .resultCountWrapper {
+    .textXlarge {
+      @include responsiveToUp(md) {
+        font-size: #{$font16}rem !important;
+      }
+    }
+  }
+  .sortWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    .sortDropdownWrapper {
+    }
+  }
+}
+
+.noResultsWrapper {
+  text-align: center;
+  max-width: 45rem;
+  margin: auto;
+}
+
+.cruiseListWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: #{$space56}rem;
+  @include responsiveToUp(md) {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

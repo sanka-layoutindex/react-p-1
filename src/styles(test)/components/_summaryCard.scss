@@ -1,0 +1,282 @@
+.summaryOverlay {
+  @include responsiveToUp(lg) {
+    z-index: 99;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  &.open {
+    @include responsiveToUp(lg) {
+      position: fixed;
+      inset: 0;
+      background-color: #0000008f;
+    }
+  }
+  &.closed {
+    @include responsiveToUp(lg) {
+      position: unset;
+      background-color: unset;
+    }
+  }
+
+  .summarySection {
+    background-color: $white;
+    padding: 1rem;
+    @include responsiveToUp(lg) {
+      border-top: 1px solid $gray4;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &.open {
+      @include responsiveToUp(lg) {
+        transform: translateY(0%);
+      }
+    }
+    &.closed {
+      @include responsiveToUp(lg) {
+        transform: translateY(calc(100% - 5.375rem));
+      }
+    }
+
+    .mobileLine {
+      background-color: $gray12;
+      width: 48px;
+      height: 4px;
+      margin: auto;
+    }
+    .summaryCardWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .mobileWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        @include responsiveToUp(lg) {
+          flex-direction: row;
+          height: 4rem;
+        }
+        .imageWrapper {
+          @include responsiveToUp(lg) {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 4px;
+            overflow: hidden;
+          }
+          .ratioImageWrapper.ratio_21_9 {
+            @include responsiveToUp(lg) {
+              padding-top: 100%;
+            }
+          }
+        }
+        .textWrapper {
+          .textXlarge {
+            @include responsiveToUp(lg) {
+              font-size: #{$font20}rem !important;
+            }
+          }
+          .text2Xlarge {
+            line-height: 1 !important;
+            @include responsiveToUp(lg) {
+              font-size: #{$font28}rem !important;
+            }
+          }
+        }
+      }
+      .textWrapper {
+        &.price {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1rem;
+          .textMedium {
+          }
+          .text2Xlarge {
+            line-height: 1 !important;
+          }
+        }
+      }
+      .ant-divider {
+        margin: 0;
+        border-block-start: 1px solid $gray4;
+      }
+      .tripDateRangeWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        .departWrapper {
+          .title {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        .arrowWrapper {
+          width: 0.75rem;
+          height: 0.75rem;
+          min-width: 0.75rem;
+          min-height: 0.75rem;
+          svg {
+            width: auto;
+            height: 100%;
+          }
+        }
+        .arriveWrapper {
+          .title {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    .collapseWrapper {
+      @include responsiveToUp(lg) {
+        max-height: 40dvh;
+        overflow: auto;
+      }
+      .collapse {
+        .panel {
+          &.ant-collapse-item.ant-collapse-item-active {
+            .ant-collapse-header {
+              background-color: $blue3;
+              @include responsiveToUp(lg) {
+                display: none;
+              }
+              .ant-collapse-header-text {
+                .panelHeaderWrapper {
+                  .iconWrapper {
+                    transform: rotate(0deg);
+                  }
+                }
+              }
+            }
+          }
+          .ant-collapse-header {
+            border-radius: unset !important;
+            .ant-collapse-expand-icon {
+              display: none;
+            }
+            .ant-collapse-header-text {
+              .panelHeaderWrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                .textNormal {
+                }
+                .iconWrapper {
+                  width: 1.25rem;
+                  height: 1.25rem;
+                  min-width: 1.25rem;
+                  min-height: 1.25rem;
+                  transform: rotate(180deg);
+                  transition: all 0.3s ease-in-out;
+                  svg {
+                    width: auto;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+
+          .ant-collapse-content {
+            border: unset !important;
+            .ant-collapse-content-box {
+              padding: 0.75rem !important;
+              .sammaryRowWrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding-bottom: 0.75rem;
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid $gray4;
+                .sammaryRow {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  .summaryLeft {
+                    display: flex;
+                    flex-direction: column;
+                    .textMedium {
+                    }
+                    .textNormal {
+                    }
+                  }
+                  .summaryRight {
+                    .textNormal {
+                    }
+                  }
+                }
+
+                .sammarySubRowWrapper {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1rem;
+                  .subtitleWrapper {
+                    .textXsmall {
+                    }
+                  }
+                  .sammarySubRow {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .summaryLeft {
+                      padding-left: 1rem;
+                      .textMedium {
+                      }
+                    }
+                    .summaryRight {
+                      .textNormal {
+                      }
+                    }
+                  }
+                }
+              }
+              .summaryBottomWrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .sammaryRow {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  .summaryLeft {
+                    display: flex;
+                    flex-direction: column;
+                    .textMedium {
+                    }
+                    .textNormal {
+                    }
+                  }
+                  .summaryRight {
+                    .textNormal {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html:has(.summaryOverlay.open) {
+  overflow: hidden;
+}
