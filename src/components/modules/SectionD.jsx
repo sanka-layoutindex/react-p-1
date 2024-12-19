@@ -63,7 +63,7 @@ function SectionD() {
             {teamData.map((team) => {
               return (
                 <div className="card" key={team.id}>
-                  <div className="img-box">
+                  <div className="img-box ratioImageWrapper ratio_1_1">
                     <img
                       className="w-100"
                       src={team.image}

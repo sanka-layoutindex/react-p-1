@@ -32,7 +32,7 @@ function Slider1() {
       >
         <SwiperSlide>
           <div className="card">
-            <div className="img-box">
+            <div className="img-box ratioImageWrapper ratio_4_3">
               <img className="img-fluid" src={sliderimg} alt="owl-image" />
             </div>
             <div className="card-body">
@@ -46,7 +46,7 @@ function Slider1() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="card">
-            <div className="img-box">
+            <div className="img-box ratioImageWrapper ratio_4_3">
               <img className="img-fluid" src={sliderimg} alt="owl-image" />
             </div>
             <div className="card-body">
@@ -60,7 +60,7 @@ function Slider1() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="card">
-            <div className="img-box">
+            <div className="img-box ratioImageWrapper ratio_4_3">
               <img className="img-fluid" src={sliderimg} alt="owl-image" />
             </div>
             <div className="card-body">
@@ -74,7 +74,7 @@ function Slider1() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="card">
-            <div className="img-box">
+            <div className="img-box ratioImageWrapper ratio_4_3">
               <img className="img-fluid" src={sliderimg} alt="owl-image" />
             </div>
             <div className="card-body">

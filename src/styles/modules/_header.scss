@@ -15,10 +15,11 @@
         color: $primaryColor;
         font-size: #{$font16}rem !important;
         font-weight: 400;
+        transition: 0.5s ease-in-out;
 
         &:hover{
             color: $blue1 !important;
-            transition: 0.5s ease-in-out;
+
         }
     }
   }

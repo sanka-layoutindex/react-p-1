@@ -39,9 +39,18 @@
         line-height: 1.4;
     }
 
-    &:hover {
-      transform: scale(1.05);
-      transition: 0.5s ease-in-out;
+    .img-box{
+      overflow: hidden;
+
+      img{
+        transition: 0.5s ease-in-out;
+  
+        &:hover {
+          transform: scale(1.05);
+     
+        }
+      }
+
     }
 
     .card-body{

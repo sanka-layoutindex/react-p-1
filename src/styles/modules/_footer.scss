@@ -8,8 +8,12 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     @include responsiveToUp(lg){
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 2rem;
+
+    }
+    @include responsiveToUp(md){
+      grid-template-columns: 1fr;
 
     }
 
@@ -47,6 +51,12 @@
     background-color: $black2;
     padding: 0.75rem;
     border-radius: 0.5rem;
+    border: none;
+    color: $white1;
+
+    &:focus-visible{
+      outline: none !important;
+    }
   }
 
   input[type="submit" i] {
@@ -55,6 +65,7 @@
     border-radius: 12px;
     color: $primaryColor;
     margin-left: -10px;
+    border: none;
 
     @include responsiveToUp(md){
       padding: 0.75rem 1rem;
@@ -71,7 +82,7 @@
     opacity: 0.8;
     display: flex;
     gap: 1rem;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
 
     &::before {
@@ -91,7 +102,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 15px;
+      bottom: 1rem;
       left: 0;
       background-color: white;
       height: 1px;
@@ -105,6 +116,22 @@
     .social {
       display: flex;
       gap: 15px;
+
+      .iconWrapper{
+        width: 1.25rem;
+        height: 1.25rem;
+        color: $white1;
+        transition: 0.5s ease-in-out;
+
+        &:hover{
+          color: $blue1;
+        }
+
+        svg{
+          width: auto !important;
+          height: 100% !important;
+        }
+      }
     }
   }
 }

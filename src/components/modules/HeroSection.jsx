@@ -21,13 +21,13 @@ function HeroSection() {
               </p>
             </div>
             <div class="boxes">
-              <div className="imageWrapper">
+              <div className="imageWrapper ratioImageWrapper ratio_1_1">
                 <img className="img-fluid" src={hero1} alt="hero" />
               </div>
-              <div className="imageWrapper">
+              <div className="imageWrapper ratioImageWrapper ratio_1_1">
                 <img className="img-fluid" src={hero2} alt="hero" />
               </div>
-              <div className="imageWrapper">
+              <div className="imageWrapper ratioImageWrapper ratio_1_1">
                 <img className="img-fluid" src={hero3} alt="hero" />
               </div>
             </div>

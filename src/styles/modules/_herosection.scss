@@ -9,15 +9,20 @@
       }
     }
     .boxes {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       width: 85%;
       margin: auto;
       gap: 2rem;
 
       @include responsiveToUp(lg){
+        gap: 1rem;
+      }
+  
+      @include responsiveToUp(md){
+        display: flex;
         flex-direction: column;
+        gap: 1.5rem;
       }
   
       .imageWrapper {
@@ -25,10 +30,11 @@
         border-radius: 1.5rem;
   
         img {
+          transition: 0.5s ease-in-out;
   
           &:hover {
               transform: scale(1.1);
-              transition: 0.5s ease-in-out;
+      
           }
         }
       }
