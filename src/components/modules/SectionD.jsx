@@ -65,7 +65,7 @@ function SectionD() {
                 <div className="card" key={team.id}>
                   <div className="img-box">
                     <img
-                      className="img-fluid"
+                      className="w-100"
                       src={team.image}
                       alt={team.title}
                     />

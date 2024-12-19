@@ -16,6 +16,12 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 4rem;
 
+        @include responsiveToUp(lg){
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
         .card {
             border: none;
             background-color: transparent !important;

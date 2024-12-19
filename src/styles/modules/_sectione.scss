@@ -3,6 +3,12 @@
     overflow: hidden;
     z-index: 1;
 
+    h2{
+        @include responsiveToUp(lg){
+            font-size: #{$font30}rem !important;
+        }
+    }
+
     &::after{
         content: "";
         width: 100%;

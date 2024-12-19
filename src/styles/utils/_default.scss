@@ -25,4 +25,9 @@ a{
   text-decoration: none !important;
 }
 
+br{
+  @include responsiveToUp(lg){
+    display: none;
+  }
+}
 

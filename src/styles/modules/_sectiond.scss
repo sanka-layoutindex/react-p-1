@@ -4,6 +4,10 @@
     grid-template-columns: 4fr 8fr;
     gap: 2rem;
 
+    @include responsiveToUp(lg){
+      grid-template-columns: 1fr;
+    }
+
     .left {
       margin-top: 2rem;
 
@@ -16,6 +20,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1.5rem;
+
+      @include responsiveToUp(lg){
+        grid-template-columns: 1fr 1fr;
+      }
+      @include responsiveToUp(md){
+        grid-template-columns: 1fr;
+      }
     }
   }
 

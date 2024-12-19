@@ -3,11 +3,23 @@
 h1 {
   font-size: #{$font56}rem !important;
   line-height: 1.1 !important;
+
+  @include responsiveToUp(lg){
+    font-size: #{$font48}rem !important;
+  }
+
+  @include responsiveToUp(md){
+    font-size: #{$font35}rem !important;
+  }
 }
 
 h2 {
   font-size: #{$font48}rem !important;
   line-height: 1.2 !important;
+
+  @include responsiveToUp(lg){
+    font-size: #{$font30}rem !important;
+  }
 }
 
 h3 {

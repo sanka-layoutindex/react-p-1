@@ -6,6 +6,11 @@
     gap: 2rem;
     width: 80%;
 
+    @include responsiveToUp(lg) {
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
     .nav-link{
         color: $primaryColor;
         font-size: #{$font16}rem !important;

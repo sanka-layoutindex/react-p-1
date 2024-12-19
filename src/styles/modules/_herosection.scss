@@ -15,6 +15,10 @@
       width: 85%;
       margin: auto;
       gap: 2rem;
+
+      @include responsiveToUp(lg){
+        flex-direction: column;
+      }
   
       .imageWrapper {
         overflow: hidden;
